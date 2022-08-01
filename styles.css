@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@100&family=Square+Peg&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 500px;
+    min-width: 400px;
+    overflow: hidden;
+    
+}
+
+#save-btn {
+    margin-top: 1vh;
+    margin-bottom:1vh;
+    position: absolute;
+    width: 45.5vw;
+    left:3vw;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+#erase-btn {
+    margin-top: 1vh;
+    margin-bottom:1vh;
+    position: absolute;
+    width: 45.5vw;
+    right:3vw;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.buttons{
+    margin:0;
+    position: relative;
+    width:100vw;
+}
+#save-btn {
+    background: rgb(24, 174, 24);
+    color: aliceblue;
+    border: 2px solid rgb(24, 174, 24);;
+}
+#save-btn:hover{
+    background: aliceblue;
+    color: rgb(24, 174, 24);;
+}
+#erase-btn {
+    color: rgb(255, 255, 255);
+    background: rgb(243, 0, 0);
+    border: 2px solid rgb(243, 0, 0);
+
+}
+#erase-btn:hover{
+    color: rgb(243, 0, 0);
+    background: rgb(255, 255, 255);
+    
+}
