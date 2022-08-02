@@ -1,39 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@100&family=Square+Peg&display=swap');
 
+::-webkit-scrollbar {
+    width: 11px;
+    
+}
+  
+ 
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 body{
     margin:0;
     padding:0;
-    font-family: 'Open Sans', sans-serif;
-    max-width: 500px;
+    font-family: 'Roboto', sans-serif;
     min-width: 400px;
+    min-height: 200px;
     overflow: hidden;
     
 }
 
+.container{
+    width:100vw;
+    height:80vh;
+    position: relative;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.desert{
+    margin: 2vh 0 ;
+    position: absolute;
+    width:94vw;
+    height: 76vh;
+    left:3vw;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.4;
+    
+}
+
 #save-btn {
+    font-size: 1rem;
     margin-top: 1vh;
     margin-bottom:1vh;
     position: absolute;
     width: 45.5vw;
     left:3vw;
-    padding: 10px 20px;
-    font-weight: bold;
+    padding: 4px 12px;
 }
 #erase-btn {
+    font-size: 1rem;
     margin-top: 1vh;
     margin-bottom:1vh;
     position: absolute;
     width: 45.5vw;
     right:3vw;
-    padding: 10px 20px;
-    font-weight: bold;
+    padding: 4px 12px;
 }
 .buttons{
+    height: 20vh;
     margin:0;
     position: relative;
     width:100vw;
 }
 #save-btn {
+    border-radius:6px;
     background: rgb(24, 174, 24);
     color: aliceblue;
     border: 2px solid rgb(24, 174, 24);;
@@ -43,6 +84,7 @@ body{
     color: rgb(24, 174, 24);;
 }
 #erase-btn {
+    border-radius:6px;
     color: rgb(255, 255, 255);
     background: rgb(243, 0, 0);
     border: 2px solid rgb(243, 0, 0);
@@ -52,4 +94,62 @@ body{
     color: rgb(243, 0, 0);
     background: rgb(255, 255, 255);
     
+}
+
+.link-box{
+    position: relative;
+    
+    min-height: 30px;
+    margin-top:1vh;
+    margin-left:3vw;
+    height: 6vh;
+    width: 94vw;
+    background-color: black;
+    
+}
+
+.link-btn{
+    position: absolute;
+    width: 56vw;
+    min-height: 30px;
+    height: 6vh;
+    display: flex;    
+    align-items: center;
+    margin-left:1vh;
+    color: azure;
+    overflow: hidden;
+}
+
+.delete-btn {
+    min-height: 30px;
+    position: absolute;
+    width: 19vw;
+    
+}
+.del-icon{
+    min-height: 30px;
+    position: absolute;
+    height: 5vh;
+    margin-left: 70vw;
+    top: 0.5vh;
+
+}
+
+.move-btn{
+    min-height: 30px;
+    position: absolute;
+    width: 19vw;
+
+}
+.move-icon{
+    min-height: 20px;
+    position: absolute;
+    height: 4vh;
+    margin-left: 80vw;
+    top: 1vh;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
