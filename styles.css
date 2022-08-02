@@ -27,6 +27,8 @@ body{
     min-height: 200px;
     max-height: 300px;
     overflow: hidden;
+    position: relative;
+    z-index:-9;
     
 }
 
@@ -64,12 +66,11 @@ body{
     height: 6vh;
     width: 90vw;
     background-color: rgba(0, 0, 0, 0.208);
-    
+
 }
 
 .link-box:hover{
-    transition: transform 0.45s;
-    transform: scale(1.04);
+    background-color: rgba(0, 0, 0, 0.254);
 }
 .link-btn{
     position: absolute;
@@ -102,12 +103,13 @@ body{
 }
 
 .note-box{
-    position:absolute;
-    margin-top:1vh;
+    position: relative;
     margin-left:10vw ;
     height: 100px;
     width:58.5vw;
     background-color: aqua;
+    z-index: 1;
+    
 }
 .delete-btn {
     min-height: 30px;
