@@ -4,6 +4,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cuprum&family=Montserrat&family=Open+Sans:wght@300&family=Roboto:wght@300&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -11,9 +12,12 @@
                 <img style="display: none;" src="images/desert.jpg">
             </div>
 
+
+
+            <div class="dragbox">
             <div class="link-box">
                 <div class="link-btn" >
-                    <a href="#" style="text-decoration:none; color: rgb(0, 2, 21);">ppppppppppppppppppppppppppppppppppppaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaappppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</a>
+                    <a href="#" style="text-decoration:none; color: rgb(0, 2, 21);">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaappppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</a>
                 </div>
                 <div class="notes">
                     
@@ -48,7 +52,41 @@
 
             <div class="link-box">
                 <div class="link-btn">
-                    ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+                    rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrpppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+                </div>
+                <div class="notes">
+                    
+                    <img class="note-icon" src="images/pencil.svg">
+                    
+                </div>
+                <div class="delete-btn">
+                    <img class="del-icon" src="images/delete.svg">
+                </div>
+                <div class="move-btn">
+                    <img class="move-icon" src="images/grid.png">
+                </div>
+            </div>
+
+            <div class="link-box">
+                <div class="link-btn">
+                    pccccccccccccccccccccccccccccccccccccccccccccccpppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+                </div>
+                <div class="notes">
+                    
+                    <img class="note-icon" src="images/pencil.svg">
+                    
+                </div>
+                <div class="delete-btn">
+                    <img class="del-icon" src="images/delete.svg">
+                </div>
+                <div class="move-btn">
+                    <img class="move-icon" src="images/grid.png">
+                </div>
+            </div>
+
+            <div class="link-box">
+                <div class="link-btn">
+                    pppmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmpppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
                 </div>
                 <div class="notes">
                     
@@ -300,39 +338,6 @@
                     <img class="move-icon" src="images/grid.png">
                 </div>
             </div>
-
-            <div class="link-box">
-                <div class="link-btn">
-                    ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-                </div>
-                <div class="notes">
-                    
-                    <img class="note-icon" src="images/pencil.svg">
-                    
-                </div>
-                <div class="delete-btn">
-                    <img class="del-icon" src="images/delete.svg">
-                </div>
-                <div class="move-btn">
-                    <img class="move-icon" src="images/grid.png">
-                </div>
-            </div>
-
-            <div class="link-box">
-                <div class="link-btn">
-                    ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-                </div>
-                <div class="notes">
-                    
-                    <img class="note-icon" src="images/pencil.svg">
-                    
-                </div>
-                <div class="delete-btn">
-                    <img class="del-icon" src="images/delete.svg">
-                </div>
-                <div class="move-btn">
-                    <img class="move-icon" src="images/grid.png">
-                </div>
             </div>
 
 
@@ -350,6 +355,12 @@
             <div id="ideal-cart"><a href="" style="text-decoration: none;">ideal CART</a></div>
         </div>
         <script src="jquery-3.6.0.min.js"></script>
-        <script src="myscripts.js"></script>
+        <script src="myscripts.js">
+            var listEl = document.querySelector(".dragbox");
+            new Sortable(listEl,{
+                animation: 400
+            });
+
+        </script>
     </body>
 </html>
