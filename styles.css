@@ -84,10 +84,21 @@ body{
     overflow: hidden;
 }
 
+.notes{
+    min-height: 30px;
+    position: absolute;
+    width: 13vw;
+}
+.note-icon {
+    min-height: 23px;
+    position: absolute;
+    height: 3vh;
+    margin-left: 66.5vw;
+}
 .delete-btn {
     min-height: 30px;
     position: absolute;
-    width: 19vw;
+    width: 13vw;
     
 }
 .del-icon{
@@ -101,7 +112,7 @@ body{
 .move-btn{
     min-height: 30px;
     position: absolute;
-    width: 19vw;
+    width: 13vw;
 
 }
 .move-icon{
