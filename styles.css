@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@100&family=Square+Peg&display=swap');
 
+/****************************SCROLL BAR***********************************/
 ::-webkit-scrollbar {
     width: 11px;
     
@@ -18,6 +19,7 @@
     background: #555; 
 }
 
+/******************************BODY*************************************/
 body{
     margin:0;
     padding:0;
@@ -28,6 +30,8 @@ body{
     
 }
 
+
+/******************************TOP-BOX*************************************/
 .container{
     width:100vw;
     height:80vh;
@@ -36,6 +40,7 @@ body{
     overflow-x: hidden;
 }
 .desert{
+    
     margin: 2vh 0 ;
     position: absolute;
     width:94vw;
@@ -49,61 +54,15 @@ body{
     
 }
 
-#save-btn {
-    font-size: 1rem;
-    margin-top: 1vh;
-    margin-bottom:1vh;
-    position: absolute;
-    width: 45.5vw;
-    left:3vw;
-    padding: 4px 12px;
-}
-#erase-btn {
-    font-size: 1rem;
-    margin-top: 1vh;
-    margin-bottom:1vh;
-    position: absolute;
-    width: 45.5vw;
-    right:3vw;
-    padding: 4px 12px;
-}
-.buttons{
-    height: 20vh;
-    margin:0;
-    position: relative;
-    width:100vw;
-}
-#save-btn {
-    border-radius:6px;
-    background: rgb(24, 174, 24);
-    color: aliceblue;
-    border: 2px solid rgb(24, 174, 24);;
-}
-#save-btn:hover{
-    background: aliceblue;
-    color: rgb(24, 174, 24);;
-}
-#erase-btn {
-    border-radius:6px;
-    color: rgb(255, 255, 255);
-    background: rgb(243, 0, 0);
-    border: 2px solid rgb(243, 0, 0);
-
-}
-#erase-btn:hover{
-    color: rgb(243, 0, 0);
-    background: rgb(255, 255, 255);
-    
-}
 
 .link-box{
     position: relative;
     
     min-height: 30px;
-    margin-top:1vh;
-    margin-left:3vw;
+    margin-top:2vh;
+    margin-left:5vw;
     height: 6vh;
-    width: 94vw;
+    width: 90vw;
     background-color: black;
     
 }
@@ -115,7 +74,7 @@ body{
     height: 6vh;
     display: flex;    
     align-items: center;
-    margin-left:1vh;
+    margin-left:2vw;
     color: azure;
     overflow: hidden;
 }
@@ -130,8 +89,7 @@ body{
     min-height: 30px;
     position: absolute;
     height: 5vh;
-    margin-left: 70vw;
-    top: 0.5vh;
+    margin-left: 73.5vw;
 
 }
 
@@ -145,11 +103,59 @@ body{
     min-height: 20px;
     position: absolute;
     height: 4vh;
-    margin-left: 80vw;
-    top: 1vh;
+    margin-left: 82.5vw;
+    top: 2vh;
     background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+/******************************THE-FOOTER******************************************/
+
+.buttons{
+    height: 20vh;
+    margin:0;
+    position: relative;
+    width:100vw;
+}
+#save-btn {
+    
+    margin-top: 3.5vh;
+    margin-bottom:3.5vh;
+    position: absolute;
+    width: 33.5vw;
+    height: 13vh;
+    left:3vw;
+    padding: 4px 12px;
+    border-radius:6px;
+    background: rgb(13, 141, 13);
+    color: aliceblue;
+    border: 2px solid rgb(13, 141, 13);
+    font-weight: 500;
+}
+#save-btn:hover{
+    background: aliceblue;
+    color: rgb(13, 141, 13);
+    font-weight: 550;
+}
+#erase-btn {
+    color: rgb(255, 255, 255);
+    background: rgb(243, 0, 0);
+    border: 2px solid rgb(243, 0, 0);
+    margin-top: 3.5vh;
+    margin-bottom:3.5vh;
+    position: absolute;
+    width: 33.5vw;
+    height: 13vh;
+    left:39.5vw;
+    padding: 4px 12px;
+    border-radius:6px;
+    font-weight: 500;
+}
+#erase-btn:hover{
+    color: rgb(243, 0, 0);
+    background: rgb(255, 255, 255);
+    font-weight: 550;
 }
