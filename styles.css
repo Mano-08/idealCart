@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@100&family=Square+Peg&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@100&family=Square+Peg&display=swap');
 /****************************SCROLL BAR***********************************/
 ::-webkit-scrollbar {
     width: 11px;
@@ -26,6 +25,7 @@ body{
     font-family: 'Roboto', sans-serif;
     min-width: 400px;
     min-height: 200px;
+    max-height: 300px;
     overflow: hidden;
     
 }
@@ -63,19 +63,24 @@ body{
     margin-left:5vw;
     height: 6vh;
     width: 90vw;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.208);
     
 }
 
+.link-box:hover{
+    transition: transform 0.45s;
+    transform: scale(1.04);
+}
 .link-btn{
     position: absolute;
+    font-size: 15px;
     width: 56vw;
     min-height: 30px;
     height: 6vh;
     display: flex;    
     align-items: center;
     margin-left:2vw;
-    color: azure;
+    color: rgb(0, 2, 21);
     overflow: hidden;
 }
 
@@ -105,11 +110,18 @@ body{
     height: 4vh;
     margin-left: 82.5vw;
     top: 2vh;
-    background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.del-icon:hover{
+    background-color: rgba(224, 69, 69, 0.351);
+}
+.move-icon:hover{
+    background-color: rgba(140, 140, 140, 0.364);
+    
 }
 
 /******************************THE-FOOTER******************************************/
@@ -129,7 +141,7 @@ body{
     height: 13vh;
     left:3vw;
     padding: 4px 12px;
-    border-radius:6px;
+    border-radius:3px;
     background: rgb(13, 141, 13);
     color: aliceblue;
     border: 2px solid rgb(13, 141, 13);
@@ -151,11 +163,22 @@ body{
     height: 13vh;
     left:39.5vw;
     padding: 4px 12px;
-    border-radius:6px;
+    border-radius:3px;
     font-weight: 500;
 }
 #erase-btn:hover{
     color: rgb(243, 0, 0);
     background: rgb(255, 255, 255);
     font-weight: 550;
+}
+
+#ideal-cart{
+    font-size:1rem;
+    font-weight: 800;
+    font-family: 'Cedarville Cursive', cursive;
+    color:rgb(189, 247, 0);
+    position: absolute;
+    left:76vw;
+    bottom:2.3vh;
+    opacity:0.4;
 }
