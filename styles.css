@@ -90,10 +90,24 @@ body{
     width: 13vw;
 }
 .note-icon {
-    min-height: 23px;
+    border: 4px solid rgba(243, 238, 238, 0);
+    min-height: 22px;
     position: absolute;
     height: 3vh;
-    margin-left: 66.5vw;
+    margin-left: 68.5vw;
+}
+
+.note-icon:hover {
+    background-color: rgba(0, 255, 255, 0.352);
+}
+
+.note-box{
+    position:absolute;
+    margin-top:1vh;
+    margin-left:10vw ;
+    height: 100px;
+    width:58.5vw;
+    background-color: aqua;
 }
 .delete-btn {
     min-height: 30px;
@@ -105,7 +119,7 @@ body{
     min-height: 30px;
     position: absolute;
     height: 5vh;
-    margin-left: 73.5vw;
+    margin-left: 75.5vw;
 
 }
 
@@ -120,11 +134,7 @@ body{
     position: absolute;
     height: 4vh;
     margin-left: 82.5vw;
-    top: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    border:5px solid rgba(0, 0, 0, 0);
 }
 
 .del-icon:hover{
