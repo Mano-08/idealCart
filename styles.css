@@ -40,8 +40,16 @@ body{
     overflow: scroll;
     overflow-x: hidden;
 }
+
+#container {
+    padding-top:1vh;
+    width: 96vw;
+    min-height:76vh;
+    margin-left: 3vw;
+    background: rgba(0, 0, 0, 0.221);
+}
+
 .desert{
-    
     margin: 2vh 0 ;
     position: absolute;
     width:94vw;
@@ -51,20 +59,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.4;
     
 }
-
 
 .link-box{
     position: relative;
     
     min-height: 30px;
     margin-top:2vh;
-    margin-left:5vw;
+    margin-left:2vw;
     height: 6vh;
     width: 90vw;
-    background-color: rgba(0, 0, 0, 0.208);
+    background-color: rgba(0, 0, 0, 0.188);
+    
 
 }
 
@@ -72,16 +79,22 @@ body{
     background-color: rgba(0, 0, 0, 0.254);
 }
 .link-btn{
+    top:10%;
+    overflow: hidden;
     position: absolute;
     font-size: 15px;
-    width: 56vw;
-    min-height: 30px;
-    height: 6vh;
+    width: 60vw;
+    height: 80%;
     display: flex;    
     align-items: center;
     margin-left:2vw;
     color: rgb(0, 2, 21);
-    overflow: hidden;
+    
+}
+
+.the-link{
+    width: 100vw;    
+    position: absolute;
 }
 
 .notes{
@@ -142,7 +155,7 @@ body{
     background-color: rgba(224, 69, 69, 0.351);
 }
 .move-icon:hover{
-    background-color: rgba(140, 140, 140, 0.364);
+    background-color: rgba(0, 0, 0, 0.12);
     
 }
 
@@ -170,14 +183,12 @@ body{
     font-weight: 500;
 }
 #save-btn:hover{
-    background: aliceblue;
-    color: rgb(13, 141, 13);
-    font-weight: 550;
+    background: rgb(40, 163, 18);
 }
 #erase-btn {
     color: rgb(255, 255, 255);
-    background: rgb(243, 0, 0);
-    border: 2px solid rgb(243, 0, 0);
+    background: rgb(231, 0, 0);
+    border: 2px solid rgb(237, 0, 0);
     margin-top: 3.5vh;
     margin-bottom:3.5vh;
     position: absolute;
@@ -189,18 +200,20 @@ body{
     font-weight: 500;
 }
 #erase-btn:hover{
-    color: rgb(243, 0, 0);
-    background: rgb(255, 255, 255);
-    font-weight: 550;
+    background: rgb(239, 46, 46);
 }
 
 #ideal-cart{
     font-size:1rem;
     font-weight: 800;
     font-family: 'Cedarville Cursive', cursive;
-    color:rgb(189, 247, 0);
+    
     position: absolute;
     left:76vw;
     bottom:2.3vh;
-    opacity:0.4;
+    opacity:0.47;
+}
+
+#ideal-cart:hover {
+    opacity: 0.76;
 }
