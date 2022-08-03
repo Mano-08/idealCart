@@ -41,7 +41,13 @@ body{
     overflow-x: hidden;
 }
 
-
+#container {
+    padding-top:1vh;
+    width: 94vw;
+    min-height:76vh;
+    margin-left: 3vw;
+    background: rgba(0, 0, 0, 0.103);
+}
 
 .desert{
     margin: 2vh 0 ;
@@ -55,15 +61,6 @@ body{
     align-items: center;
     
 }
-
-.desert-caption {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 900px;
-}
-
 
 .link-box{
     position: relative;

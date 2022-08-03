@@ -4,8 +4,20 @@ const containerEl = document.getElementById("container")
 const listFromLocalStorage = JSON.parse(localStorage.getItem("myList"))
 const clearEl = document.getElementById("erase-btn")
 const desertEl = document.getElementById("desert-img")
+const containerBackgroundEl = document.getElementById("container")
 
+if (listFromLocalStorage) {
+    myList = listFromLocalStorage
+    render(myList)
+}
 
+saveEl.addEventListener("click", function(){    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myList.push(tabs[0].url)
+        localStorage.setItem("myList", JSON.stringify(myList) )
+        render(myList)
+    })
+})
 
 function render(aList) {
     desertEl.style.display = "none"
@@ -16,9 +28,9 @@ function render(aList) {
         let string_ = aList[i].slice(0,38)
         listItems += `
             
-            <div class="link-box" id="${idVal}">
+            <div class="link-box" id="${idLink}">
                 <div class="link-btn" >
-                    <a href="${aList[i]}" id="${idLink}" class="the-link"  style="text-decoration:none; color: rgb(0, 2, 21);">${string_}</a>
+                    <a href="${aList[i]}" target="_blank" id="${idLink}" class="the-link"  style="text-decoration:none; color: rgb(0, 2, 21);">${string_}</a>
                 </div>
                 <div class="notes">
                     
