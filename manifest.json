@@ -1,10 +1,10 @@
 {
     "manifest_version": 3,
     "version": "1.0",
-    "name": "Leads tracker",
+    "name": "ideal_CART",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png"
+        "default_icon": "icon.png"
     },
     "permissions": [
         "tabs"
