@@ -43,10 +43,10 @@ body{
 
 #container {
     padding-top:1vh;
-    width: 94vw;
+    width: 96vw;
     min-height:76vh;
     margin-left: 3vw;
-    background: rgba(0, 0, 0, 0.103);
+    background: rgba(0, 0, 0, 0.221);
 }
 
 .desert{
