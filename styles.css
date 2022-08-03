@@ -207,9 +207,13 @@ body{
     font-size:1rem;
     font-weight: 800;
     font-family: 'Cedarville Cursive', cursive;
-    color:rgb(189, 247, 0);
+    
     position: absolute;
     left:76vw;
     bottom:2.3vh;
-    opacity:0.4;
+    opacity:0.47;
+}
+
+#ideal-cart:hover {
+    opacity: 0.76;
 }
