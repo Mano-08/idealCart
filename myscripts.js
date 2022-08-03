@@ -6,19 +6,6 @@ const clearEl = document.getElementById("erase-btn")
 const desertEl = document.getElementById("desert-img")
 const containerBackgroundEl = document.getElementById("container")
 
-if (listFromLocalStorage) {
-    myList = listFromLocalStorage
-    render(myList)
-}
-
-saveEl.addEventListener("click", function(){    
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        myList.push(tabs[0].url)
-        localStorage.setItem("myList", JSON.stringify(myList) )
-        render(myList)
-    })
-})
-
 function render(aList) {
     desertEl.style.display = "none"
     let listItems = ""
@@ -49,6 +36,21 @@ function render(aList) {
     }
     containerEl.innerHTML = listItems
 }
+
+if (listFromLocalStorage) {
+    myList = listFromLocalStorage
+    render(myList)
+}
+
+saveEl.addEventListener("click", function(){    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myList.push(tabs[0].url)
+        localStorage.setItem("myList", JSON.stringify(myList) )
+        render(myList)
+    })
+})
+
+
 
 clearEl.addEventListener("dblclick", function() {
     localStorage.clear()
