@@ -50,6 +50,7 @@ function delEl(s) {
     let delID = parseInt(s.slice(8,length_))
 
 
+
     
 }
 
