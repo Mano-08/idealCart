@@ -11,6 +11,8 @@ const containerBackgroundEl = document.getElementById("container")
 function render(aList) {
     containerBackgroundEl.style.display = "block"
     desertEl.style.display = "none"
+    
+    
     let listItems = ""
     for (let i = 0; i < aList.length; i++) {
         let idLink = "link_no_" + i.toString()
@@ -42,14 +44,19 @@ function render(aList) {
     containerEl.innerHTML = listItems
 }
 
-//Function to delete a particular link_box and deduce id val of corresponding link_box by 1
+//Function to delete a particular link_box
 function delEl(s) {
     let length_ = s.length
 
     // ID of the delete button clicked
     let delID = parseInt(s.slice(8,length_))
-
-
+    localStorage.clear()
+    myList = myList.slice(0,delID).concat(myList.slice(delID+1,length_-1))
+    render(myList)
+    if (myList.length == 0) {
+        containerBackgroundEl.style.display = "none"
+        desertEl.style.display = "block"
+    }
 
     
 }
@@ -68,7 +75,7 @@ const onClick = (event) => {
     if (event.target.id.slice(0,8) in list_ ) {
         let idClicked = event.target.id
         if (idClicked.slice(0,8)=="note_no_") {
-            
+            alert(idClicked)
         } else if (idClicked.slice(0,8)=="delt_no_") {
             delEl(idClicked)
         } else {
