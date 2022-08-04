@@ -6,6 +6,8 @@ const clearEl = document.getElementById("erase-btn")
 const desertEl = document.getElementById("desert-img")
 const containerBackgroundEl = document.getElementById("container")
 
+
+
 function render(aList) {
     containerBackgroundEl.style.display = "block"
     desertEl.style.display = "none"
@@ -40,6 +42,18 @@ function render(aList) {
     containerEl.innerHTML = listItems
 }
 
+//Function to delete a particular link_box and deduce id val of corresponding link_box by 1
+function delEl(s) {
+    let length_ = s.length
+
+    // ID of the delete button clicked
+    let delID = parseInt(s.slice(8,length_))
+
+
+    
+}
+
+//To get back link data from localStorage after refresh
 if (listFromLocalStorage) {
     myList = listFromLocalStorage
     render(myList)
@@ -47,7 +61,6 @@ if (listFromLocalStorage) {
 
 
 //To get the id of any element clicked
-
 const onClick = (event) => {
     const list_ = {delt_no_:1,move_no_:2,note_no_:3}
     
@@ -56,19 +69,16 @@ const onClick = (event) => {
         if (idClicked.slice(0,8)=="note_no_") {
             
         } else if (idClicked.slice(0,8)=="delt_no_") {
-            
+            delEl(idClicked)
         } else {
             
         }
-
     } 
-
 }
-
 window.addEventListener('click', onClick)
 
 
-
+//To save the tab on clicking `save page` button
 saveEl.addEventListener("click", function(){    
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         myList.push(tabs[0].url)
@@ -79,6 +89,7 @@ saveEl.addEventListener("click", function(){
 
 
 
+//To erase all the tabs on clicking `erase all` button
 clearEl.addEventListener("dblclick", function() {
     localStorage.clear()
     myList = []
