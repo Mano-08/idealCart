@@ -44,7 +44,7 @@ body{
 #container {
     padding-top:1vh;
     width: 96vw;
-    min-height:78vh;
+    min-height:79vh;
     margin-left: 3vw;
     background: rgba(0, 0, 0, 0.221);
 }
@@ -53,7 +53,7 @@ body{
     margin: 2vh 0 ;
     position: absolute;
     width:94vw;
-    height: 76vh;
+    height: 79vh;
     left:3vw;
     overflow:hidden;
     display: flex;
