@@ -47,12 +47,12 @@ function render(aList) {
 //Function to delete a particular link_box
 function delEl(s) {
     let length_ = s.length
-
     // ID of the delete button clicked
     let delID = parseInt(s.slice(8,length_))
     localStorage.clear()
-    myList = myList.slice(0,delID).concat(myList.slice(delID+1,length_-1))
+    myList = myList.slice(0,delID).concat(myList.slice(delID+1,length.myList))
     render(myList)
+    localStorage.setItem("myList", JSON.stringify(myList) )
     if (myList.length == 0) {
         containerBackgroundEl.style.display = "none"
         desertEl.style.display = "block"
