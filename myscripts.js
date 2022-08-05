@@ -18,6 +18,7 @@ function render(aList) {
         let idLink = "link_no_" + i.toString()
         let idDel = "delt_no_" + i.toString()
         let idNote = "note_no_" + i.toString()
+        let idNoteBox = "notebox_no_" + i.toString()
         let idMove = "move_no_" + i.toString()
         let string_ = aList[i].slice(0,38)
         listItems += `
@@ -29,7 +30,7 @@ function render(aList) {
                 <div class="notes">
                     
                     <img class="note-icon" id="${idNote}" src="images/pencil.svg">
-                    <div style="display:none;" class="note-box"></div>
+                    <div style="display:none;" id="${idNoteBox}" class="note-box"></div>
                 </div>
                 <div class="delete-btn">
                     <img class="del-icon" id="${idDel}" src="images/delete.svg">
@@ -40,7 +41,13 @@ function render(aList) {
             </div>
 
         `
+        
+       
+        
+        
     }
+
+
     containerEl.innerHTML = listItems
 }
 
@@ -89,6 +96,8 @@ const onClick = (event) => {
     } 
 }
 window.addEventListener('click', onClick)
+
+
 
 
 //To save the tab on clicking `save page` button
