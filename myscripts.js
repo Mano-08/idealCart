@@ -50,7 +50,7 @@ function delEl(s) {
     // ID of the delete button clicked
     let delID = parseInt(s.slice(8,length_))
     
-    myList = myList.slice(0,delID).concat(myList.slice(delID+1,length.myList))
+    myList = myList.slice(0,delID).concat(myList.slice(delID+1,myList.length))
     render(myList)
     localStorage.setItem("myList", JSON.stringify(myList) )
     if (myList.length == 0) {
