@@ -110,17 +110,15 @@ body{
     margin-left: 68.5vw;
 }
 
-/*
 .note-icon:hover {
     background-color: rgba(0, 255, 255, 0.352);
 }
-*/
 
 .note-box{
     position: relative;
     margin-left:10vw ;
     height: 100px;
-    width:58.5vw;
+    width:57.5vw;
     background-color: rgba(160, 133, 223, 0.849);
     z-index: 1;
     border-radius:6px;

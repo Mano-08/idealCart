@@ -100,14 +100,14 @@ window.addEventListener('click', onClick)
 
 const onHover = (event) => {
     if (event.target.id.slice(0,8) == "note_no_") {
-        document.getElementById(event.target.id).style.background = "rgba(0, 255, 255, 0.352)"
+        //document.getElementById(event.target.id).style.background = "rgba(0, 255, 255, 0.352)"
         let noteIdNo = event.target.id.slice(8,event.target.id.length)
         let noteId = "notebox_no_" + noteIdNo
         document.getElementById(noteId).style.display = "block"
         document.getElementById(noteId).addEventListener('mouseover', (event_) => {
             document.getElementById(noteId).style.display = "block"
             //let newEl = "note_no_"+noteIdNo
-            document.getElementById(event.target.id).style.background = "rgba(0, 255, 255, 0.352)"
+            //document.getElementById(event.target.id).style.background = "rgba(0, 255, 255, 0.352)"
         })
     }
         
@@ -116,7 +116,7 @@ const onHover = (event) => {
         if (event.target.id.length < 11) {
             for (let i = 0; i < myList.length; i++) {
                 document.getElementsByClassName("note-box")[i].style.display = "none"
-                document.getElementsByClassName("note-icon")[i].style.background = "rgba(243, 238, 238, 0)"
+                //document.getElementsByClassName("note-icon")[i].style.background = "rgba(243, 238, 238, 0)"
             }
         }
     }
