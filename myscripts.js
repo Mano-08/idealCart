@@ -98,6 +98,7 @@ const onClick = (event) => {
 window.addEventListener('click', onClick)
 
 
+/*
 const onHover = (event) => {
     if (event.target.id.slice(0,8) == "note_no_") {
         //document.getElementById(event.target.id).style.background = "rgba(0, 255, 255, 0.352)"
@@ -105,6 +106,7 @@ const onHover = (event) => {
         let noteId = "notebox_no_" + noteIdNo
         document.getElementById(noteId).style.display = "block"
         document.getElementById(noteId).addEventListener('mouseover', (event_) => {
+
             document.getElementById(noteId).style.display = "block"
             //let newEl = "note_no_"+noteIdNo
             //document.getElementById(event.target.id).style.background = "rgba(0, 255, 255, 0.352)"
@@ -122,6 +124,8 @@ const onHover = (event) => {
     }
 }
 window.addEventListener('mouseover', onHover)
+*/
+
 
 //To save the tab on clicking `save page` button
 saveEl.addEventListener("click", function(){    
