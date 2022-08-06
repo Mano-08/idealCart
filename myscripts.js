@@ -15,6 +15,7 @@ function render(aList) {
     
     let listItems = ""
     for (let i = 0; i < aList.length; i++) {
+        let idNoteDel = "nb_close" + i.toString()
         let idLink = "link_no_" + i.toString()
         let idDel = "delt_no_" + i.toString()
         let idNote = "note_no_" + i.toString()
@@ -32,7 +33,7 @@ function render(aList) {
                     <img class="note-icon" id="${idNote}" src="images/pencil.svg">
                     <div style="display:none;" id="${idNoteBox}" class="note-box">
                         <div class="nbedit">edit</div>
-                        <div class="nbclose"><img class="notebox_close" src="images/close.svg"></div>
+                        <img class="nb_close" id="${idNoteDel}" src="images/close.svg">
                         
                     </div>
                 </div>
@@ -73,9 +74,6 @@ function delEl(s) {
 }
 
 
-
-
-
 function NoteEl(s) {
     let length1 = s.length
     // ID of the delete button clicked
@@ -83,18 +81,16 @@ function NoteEl(s) {
     let NoteBoxID = "notebox_no_" + NoteID
     document.getElementById(NoteBoxID).style.display = "block"
     
-
 }
 
 
-
-
-
-
-
-
-
-
+function NoteDelEl(s) {
+    let length2 = s.length
+    // ID of the delete button clicked
+    let NoteDelID = s.slice(8,length2)
+    let NoteBoxDelID = "notebox_no_" + NoteDelID
+    document.getElementById(NoteBoxDelID).style.display = "none"
+}
 
 
 //To get back link data from localStorage after refresh
@@ -111,13 +107,17 @@ if (myList.length == 0) {
 
 //To get the id of any element clicked
 const onClick = (event) => {
-    const list_ = {delt_no_:1,move_no_:2,note_no_:3}
+    const list_ = {delt_no_:1,move_no_:2,note_no_:3,nb_close:4}
     
     if (event.target.id.slice(0,8) in list_ ) {
         let idClicked = event.target.id
         if (idClicked.slice(0,8)=="note_no_") {
             NoteEl(idClicked)
-        } else if (idClicked.slice(0,8)=="delt_no_") {
+        } 
+        if (idClicked.slice(0,8)=="nb_close") {
+            NoteDelEl(idClicked)
+        }
+        if (idClicked.slice(0,8)=="delt_no_") {
             delEl(idClicked)
         } else {
             
