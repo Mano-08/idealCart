@@ -119,13 +119,45 @@ body{
     margin-left:10vw ;
     height: 100px;
     width:58.5vw;
-    background-color: rgba(160, 133, 223, 0.849);
+    background-color: rgb(160, 133, 223);
     z-index: 5;
     border-radius:6px;
     overflow: hidden;
     overflow-x: hidden;
-    
+    border:1px black solid;
 }
+
+.notebox_close {
+    margin-top:2px;
+    background: rgb(208, 208, 208);
+    position: absolute;
+    right:3px;
+    height: 19px;
+    width:19px;
+   
+}
+
+.notebox_close:hover{
+    background-color: rgb(255, 255, 255);
+}
+.nbedit {
+    cursor:context-menu;
+    position:absolute;
+    font-family: 'Roboto', sans-serif;
+    margin-top:2px;
+    font-size:14px;
+    padding-left: 4px;
+    padding-right:4px;
+    padding-top:1px;
+    padding-bottom:1px;
+    right:25px;
+    background: rgb(208, 208, 208);
+}
+
+.nbedit:hover{
+    background: rgb(255, 255, 255);
+}
+
 .delete-btn {
     min-height: 30px;
     position: absolute;

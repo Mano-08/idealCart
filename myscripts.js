@@ -30,7 +30,11 @@ function render(aList) {
                 <div class="notes">
                     
                     <img class="note-icon" id="${idNote}" src="images/pencil.svg">
-                    <div style="display:none;" id="${idNoteBox}" class="note-box"></div>
+                    <div style="display:none;" id="${idNoteBox}" class="note-box">
+                        <div class="nbedit">edit</div>
+                        <div class="nbclose"><img class="notebox_close" src="images/close.svg"></div>
+                        
+                    </div>
                 </div>
                 <div class="delete-btn">
                     <img class="del-icon" id="${idDel}" src="images/delete.svg">
@@ -68,6 +72,31 @@ function delEl(s) {
     
 }
 
+
+
+
+
+function NoteEl(s) {
+    let length1 = s.length
+    // ID of the delete button clicked
+    let NoteID = s.slice(8,length1)
+    let NoteBoxID = "notebox_no_" + NoteID
+    document.getElementById(NoteBoxID).style.display = "block"
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 //To get back link data from localStorage after refresh
 if (listFromLocalStorage) {
     myList = listFromLocalStorage
@@ -87,7 +116,7 @@ const onClick = (event) => {
     if (event.target.id.slice(0,8) in list_ ) {
         let idClicked = event.target.id
         if (idClicked.slice(0,8)=="note_no_") {
-            alert(idClicked)
+            NoteEl(idClicked)
         } else if (idClicked.slice(0,8)=="delt_no_") {
             delEl(idClicked)
         } else {
