@@ -3,6 +3,7 @@ let myNotes = []
 const saveEl = document.getElementById("save-btn")
 const containerEl = document.getElementById("container")
 const listFromLocalStorage = JSON.parse(localStorage.getItem("myList"))
+const notesFromLocalStorage = JSON.parse(localStorage.getItem("myNotes"))
 const clearEl = document.getElementById("erase-btn")
 const desertEl = document.getElementById("desert-img")
 const containerBackgroundEl = document.getElementById("container")
@@ -16,6 +17,7 @@ function render(aList) {
     
     let listItems = ""
     for (let i = 0; i < aList.length; i++) {
+        let idSaveButton = "save_btn" + i.toString()
         let idEditButton = "edit_btn" + i.toString()
         let idEdit = "edit_box_" + i.toString()
         let idBox = "note_box_" + i.toString()
@@ -36,7 +38,8 @@ function render(aList) {
                     
                     <img class="note-icon" id="${idNote}" src="images/pencil.svg">
                     <div style="display:none;" id="${idNoteBox}" class="note-box">
-                        <div class="nbedit" id="${idEditButton}">edit</div>
+                        <div class="nbedit" style="display:block" id="${idEditButton}">edit</div>
+                        <div class="savebtn" style="display:none;" id="${idSaveButton}">save</div>
                         <img class="nb_close" id="${idNoteDel}" src="images/close.svg">
                         <input class="edit_box_" style="display:none;" id="${idEdit}">
                         <div style="display:block;" class="note_box_" id="${idBox}">Im not sbuyf shgef auywtfdgw hbuefb wjhd jhdbewu wejhdo aiwu aiw ak wdh wjwbbawa   whbbwa  djhwbwbaa hjd  djw dhw dbj hw dwn djwh dw da </div>
@@ -51,15 +54,12 @@ function render(aList) {
             </div>
 
         `
-        
-       
-        
-        
     }
 
 
     containerEl.innerHTML = listItems
 }
+
 
 //Function to delete a particular link_box
 function delEl(s) {
@@ -103,11 +103,30 @@ function EditEl(s) {
     let NoteEditID = s.slice(8,length3)
     let NoteBox_open_ID = "note_box_" + NoteEditID
     let NoteBoxEditID = "edit_box_" + NoteEditID
+    let SaveID = "save_btn" + NoteEditID
     document.getElementById(NoteBoxEditID).style.display = "block"
     document.getElementById(NoteBox_open_ID).style.display = "none"
+    document.getElementById(s).style.display = "none"
+    document.getElementById(SaveID).style.display = "block"
     
 }
 
+function SaveBtn(s) {
+    let length4 = s.length
+    // ID of the delete button clicked
+    let NoteSaveID = s.slice(8,length4)
+    let NoteBox_ID = "note_box_" + NoteSaveID
+    let NoteBoxEdit_ID = "edit_box_" + NoteSaveID
+    let Edit_ID = "edit_btn" + NoteSaveID
+    /*myNotes.push(document.getElementById(NoteBoxEdit_ID).value)
+    document.getElementById(NoteBox_ID).innerHTML = document.getElementById(NoteBoxEdit_ID).value
+    document.getElementById(NoteBoxEdit_ID).value = ""
+    localStorage.setItem("myNotes", JSON.stringify(myNotes))
+    document.getElementById(NoteBox_ID).style.display = "block"
+    document.getElementById(NoteBoxEdit_ID).style.display = "none"
+    document.getElementById(s).style.display = "none"
+    document.getElementById(Edit_ID).style.display = "block"*/
+}
 
 //To get back link data from localStorage after refresh
 if (listFromLocalStorage) {
@@ -123,7 +142,7 @@ if (myList.length == 0) {
 
 //To get the id of any element clicked
 const onClick = (event) => {
-    const list_ = {delt_no_:1,move_no_:2,note_no_:3,nb_close:4,edit_btn:5}
+    const list_ = {delt_no_:1,move_no_:2,note_no_:3,nb_close:4,edit_btn:5,save_btn:6}
     
     if (event.target.id.slice(0,8) in list_ ) {
         let idClicked = event.target.id
@@ -138,6 +157,9 @@ const onClick = (event) => {
         } 
         if (idClicked.slice(0,8)=="edit_btn") {
             EditEl(idClicked)
+        }
+        if (idClicked.slice(0,8)=="edit_btn") {
+            SaveBtn(idClicked)
         }
         else {
             
