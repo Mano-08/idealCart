@@ -107,6 +107,10 @@ function NoteDelEl(s) {
     // ID of the delete button clicked
     let NoteDelID = s.slice(8,length2)
     let NoteBoxDelID = "notebox_no_" + NoteDelID
+    let NoteBox_open_ID = "note_box_" + NoteDelID
+    let NoteBoxEditID = "edit_box_" + NoteDelID
+    document.getElementById(NoteBoxEditID).style.display = "none"
+    document.getElementById(NoteBox_open_ID).style.display = "block"
     document.getElementById(NoteBoxDelID).style.display = "none"
 }
 
