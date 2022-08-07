@@ -15,16 +15,17 @@ function render(aList) {
     let listItems = ""
     for (let i = 0; i < aList.length; i++) {
         let edited_notes = aList[i][1]
-        let idSaveButton = "save_btn" + i.toString()
-        let idEditButton = "edit_btn" + i.toString()
-        let idEdit = "edit_box_" + i.toString()
-        let idBox = "note_box_" + i.toString()
-        let idNoteDel = "nb_close" + i.toString()
-        let idLink = "link_no_" + i.toString()
-        let idDel = "delt_no_" + i.toString()
-        let idNote = "note_no_" + i.toString()
-        let idNoteBox = "notebox_no_" + i.toString()
-        let idMove = "move_no_" + i.toString()
+        let i_str = i.toString()
+        let idSaveButton = "save_btn" + i_str
+        let idEditButton = "edit_btn" + i_str
+        let idEdit = "edit_box_" + i_str
+        let idBox = "note_box_" + i_str
+        let idNoteDel = "nb_close" + i_str
+        let idLink = "link_no_" + i_str
+        let idDel = "delt_no_" + i_str
+        let idNote = "note_no_" + i_str
+        let idNoteBox = "notebox_no_" + i_str
+        let idMove = "move_no_" + i_str
         let string_ = aList[i][0].slice(0,38)
         listItems += `
             
@@ -47,7 +48,7 @@ function render(aList) {
                     <img class="del-icon" id="${idDel}" src="images/delete.svg">
                 </div>
                 <div class="move-btn">
-                    <img id="${idMove}" class="move-icon" src="images/grid.png">
+                    <img id="${idMove}" class="move-icon" src="images/up-arrow.png">
                 </div>
             </div>
 
@@ -58,8 +59,20 @@ function render(aList) {
     containerEl.innerHTML = listItems
 }
 
+// Function to pin linkbox on top 
+function PinEl(s) {
+    let theLength = s.length
+    // ID of the delete button clicked
+    let pinID = parseInt(s.slice(8,theLength))
+    let pinVal = myList[pinID]
+    myList = myList.slice(0,pinID).concat(myList.slice(pinID+1,myList.length))
+    myList.splice(0, 0, pinVal)
+    render(myList)
+    localStorage.setItem("myList", JSON.stringify(myList) )
+}
 
-//Function to delete a particular link_box
+
+// Function to delete a particular link_box
 function delEl(s) {
     let length_ = s.length
     // ID of the delete button clicked
@@ -164,6 +177,9 @@ const onClick = (event) => {
         }
         if (idClicked.slice(0,8)=="save_btn") {
             SaveBtn(idClicked)
+        }
+        if (idClicked.slice(0,8)=="move_no_") {
+            PinEl(idClicked)
         }
         else {
             
