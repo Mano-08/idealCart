@@ -57,9 +57,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.318);
+    
 }
 
+#desert-img {
+    background: rgba(0, 0, 0, 0.318);
+}
 .link-box{
     position: relative;
     
