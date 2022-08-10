@@ -69,6 +69,23 @@ function PinEl(s) {
     myList.splice(0, 0, pinVal)
     render(myList)
     localStorage.setItem("myList", JSON.stringify(myList) )
+    let linkEl = document.getElementById("link_no_0") 
+    linkEl.style.background = "rgba(0, 0, 0, 0.388)"
+    setTimeout(function() {
+        linkEl.style.background = "rgba(0, 0, 0, 0.348)"
+    }, 300)
+    setTimeout(function() {
+        linkEl.style.background = "rgba(0, 0, 0, 0.308)"
+    }, 350)
+    setTimeout(function() {
+        linkEl.style.background = "rgba(0, 0, 0, 0.268)"
+    }, 400)
+    setTimeout(function() {
+        linkEl.style.background = "rgba(0, 0, 0, 0.228)"
+    }, 450)
+    setTimeout(function() {
+        linkEl.removeAttribute("style")
+    }, 500)
 }
 
 
