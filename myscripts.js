@@ -40,7 +40,7 @@ function render(aList) {
                         <div class="nbedit" style="display:block" id="${idEditButton}">edit</div>
                         <div class="savebtn" style="display:none;" id="${idSaveButton}">save</div>
                         <img class="nb_close" id="${idNoteDel}" src="images/close.svg">
-                        <input class="edit_box_" style="display:none;" id="${idEdit}">
+                        <input placeholder="write your short note here ....." class="edit_box_" style="display:none;" id="${idEdit}">
                         <div style="display:block;" class="note_box_" id="${idBox}">${edited_notes}</div>
                     </div>
                 </div>
@@ -151,6 +151,12 @@ function NoteDelEl(s) {
     document.getElementById("gray-container").style.display = "none"
 }
 
+function logKey(e) {
+    if (e.code == "Enter") {
+        let y = e.target.parentElement.id
+        SaveBtn(y.slice(3,y.length))
+    } 
+}
 
 // Function to Edit notes 
 function EditEl(s) {
@@ -160,6 +166,7 @@ function EditEl(s) {
     let NoteBox_open_ID = "note_box_" + NoteEditID
     let NoteBoxEditID = "edit_box_" + NoteEditID
     let SaveID = "save_btn" + NoteEditID
+    document.getElementById(NoteBoxEditID).addEventListener('keypress', logKey);
     document.getElementById(NoteBoxEditID).style.display = "block"
     document.getElementById(NoteBox_open_ID).style.display = "none"
     document.getElementById(s).style.display = "none"
@@ -179,10 +186,7 @@ function SaveBtn(s) {
     myList[parseInt(NoteSaveID)][1] = document.getElementById(NoteBoxEdit_ID).value
     localStorage.setItem("myList", JSON.stringify(myList) )
     render(myList)
-    document.getElementById(NoteBox_ID).style.display = "block"
-    document.getElementById(NoteBoxEdit_ID).style.display = "none"
-    document.getElementById(s).style.display = "none"
-    document.getElementById(Edit_ID).style.display = "block"
+    NoteEl(s)
 }
 
 //To get back link data from localStorage after refresh
