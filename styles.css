@@ -191,8 +191,8 @@ body{
     font-size: 15px;
     margin-top: 27px;
     position: absolute;
-    height:70px ;
-    width: 52.5vw;
+    min-height:70px ;
+    width: 51.75vw;
     left:10px;
     word-wrap: break-word;
     font-weight: 580;
