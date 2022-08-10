@@ -111,9 +111,23 @@ function delEl(s) {
 function NoteEl(s) {
     let length1 = s.length
     // ID of the delete button clicked
-    let NoteID = s.slice(8,length1)
-    let NoteBoxID = "notebox_no_" + NoteID
+    let NoteID = parseInt(s.slice(8,length1))
+    let NoteBoxID = "notebox_no_" + NoteID.toString()
     document.getElementById(NoteBoxID).style.display = "block"
+    if (myList.length>=3){
+        if (NoteID>=2) {
+            document.getElementById("gray-container").style.display = "block"
+            if (NoteID==2 || NoteID==myList.length - 3) {
+                document.getElementById("gray-container").style.height = "10vh"
+            }
+            else if (NoteID==3 || NoteID==myList.length - 2) {
+                document.getElementById("gray-container").style.height = "30vh"
+            }
+            else {
+                document.getElementById("gray-container").style.height = "40vh"
+            }
+        }
+    }
     
 }
 
@@ -134,6 +148,7 @@ function NoteDelEl(s) {
     document.getElementById(NoteBoxEditID).style.display = "none"
     document.getElementById(NoteBox_open_ID).style.display = "block"
     document.getElementById(NoteBoxDelID).style.display = "none"
+    document.getElementById("gray-container").style.display = "none"
 }
 
 
