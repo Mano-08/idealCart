@@ -109,6 +109,11 @@ function NoteDelEl(s) {
     let NoteBoxDelID = "notebox_no_" + NoteDelID
     let NoteBox_open_ID = "note_box_" + NoteDelID
     let NoteBoxEditID = "edit_box_" + NoteDelID
+    let save_id = "save_btn" + NoteDelID
+    let edit_id = "edit_btn" + NoteDelID
+    document.getElementById(NoteBoxEditID).value = null
+    document.getElementById(save_id).style.display = "none"
+    document.getElementById(edit_id).style.display = "block"
     document.getElementById(NoteBoxEditID).style.display = "none"
     document.getElementById(NoteBox_open_ID).style.display = "block"
     document.getElementById(NoteBoxDelID).style.display = "none"
