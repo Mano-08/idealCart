@@ -41,7 +41,7 @@
   
 <h1 align="center">III) Add Notes!<h1>
   
-<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184899536-bac792bd-b3d7-45fb-be15-284326b818d6.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184921935-a3a548ba-133b-47d6-af44-c9ad489b5f58.png">
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184925666-3fb0b4bb-8081-43d8-bd04-06edf184648c.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184925709-cc6f6042-dca7-48ec-89c2-f3d6f534fd02.png">
   
 <br>
 <br>
@@ -53,6 +53,9 @@
 <br>
   
 <div align="center">
-<img width="60%" src="https://user-images.githubusercontent.com/95289188/184921903-54b916b3-42d0-4a5e-b6d1-a7dfba1ed91b.png">
+<img width="60%" src="https://user-images.githubusercontent.com/95289188/184925907-9023e967-6f76-45fd-8e88-488e950acd6b.png">
 </div>
  
+
+ 
+  
