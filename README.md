@@ -11,7 +11,7 @@
 - 🛒ideal-Cart serves as an 'Add-To-Cart' bucket where you get to save product url along with some ✨short notes for reference!
 - ❤In addition to that one can also pin certain product links on the top of the list! 🚀that makes sorting down our wishlist more convenient! :)
 
-<!--
+
 <h1 align="center">I) Preface<h1>
 
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184692100-59d87078-9170-4030-8ac2-67db0ed3130d.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184692092-8cea43e9-21c1-481c-bc55-18a37d9fee96.png"> 
@@ -26,6 +26,8 @@
 
 <h1 align="center">II) Save Page<h1>
 
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184882733-de32cfda-9ab3-4eab-aace-f002fb45ee2a.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184882749-b318e4b6-a2c7-468c-9397-d3c8775bd912.png"> 
 
-************************
--->
+
+
+
