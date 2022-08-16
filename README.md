@@ -26,8 +26,7 @@
 
 <h1 align="center">II) Save Page<h1>
 
-<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184882733-de32cfda-9ab3-4eab-aace-f002fb45ee2a.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184882749-b318e4b6-a2c7-468c-9397-d3c8775bd912.png"> 
-
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184892812-d7cd5bc0-d03c-487e-9a35-274cd4f34fe0.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184892782-6f4b6362-7a07-4077-a8ac-a74bfef43792.png"> 
 
 
 
