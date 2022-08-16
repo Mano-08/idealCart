@@ -59,9 +59,16 @@
 <img width="60%" src="https://user-images.githubusercontent.com/95289188/184952225-51686599-757e-453b-a80c-9c72c43e54ba.png">
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
   
+<h1 align="center">IV) Add Notes!<h1>
   
-
-
- 
- 
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184957835-d7ab4282-eadc-4731-8d0e-de1f36dca793.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184952254-004edb57-698c-4ee0-9b63-c08569787c6d.png">
+  
