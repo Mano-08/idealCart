@@ -31,7 +31,7 @@
   
 <h1 align="center">II) Save Page<h1>
 
-<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184931187-6b6b4a0b-70d3-4ad5-8e1a-da4e69dc51a3.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184892782-6f4b6362-7a07-4077-a8ac-a74bfef43792.png"> 
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184931187-6b6b4a0b-70d3-4ad5-8e1a-da4e69dc51a3.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184951339-ffcf483f-8755-46b6-8238-98e27cff758c.png"> 
 
 <br>
 <br>
@@ -44,7 +44,7 @@
   
 <h1 align="center">III) Add Notes!<h1>
   
-<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184926621-7156b7b3-f570-40a7-8d67-e5f688f15e61.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184931203-71271797-3ae0-4733-a7cf-9095e02d025f.png">
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184952198-9ead30b8-3120-48e8-a53a-6e69ea619a2a.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184952254-004edb57-698c-4ee0-9b63-c08569787c6d.png">
   
 <br>
 <br>
@@ -56,14 +56,12 @@
 <br>
   
 <div align="center">
-<img width="60%" src="https://user-images.githubusercontent.com/95289188/184931212-65950a4f-148d-4479-a769-47572b37df55.png">
+<img width="60%" src="https://user-images.githubusercontent.com/95289188/184952225-51686599-757e-453b-a80c-9c72c43e54ba.png">
 </div>
 
   
   
 
-  
- 
 
  
  
