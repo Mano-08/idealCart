@@ -9,7 +9,7 @@
 
 - 💬We often hunt for products on different websites but lack a universal ADD TO CART feature and that's when I thought of building one!
 - 🛒ideal-Cart serves as an 'Add-To-Cart' bucket where you get to save product URL along with some ✨short notes for reference!
-- ❤In addition to that, one can pin certain product links on the top of the list! 🚀that makes sorting down our wishlist more convenient! :)
+- ❤In addition to that, one can pin certain product links on the top of the list! 🚀that makes sorting down our wish list more convenient! :)
 
 
 <br>
@@ -34,8 +34,7 @@
 <br>
 <br>
 <br>
-<br>
-<br>
+
 
 <div align="center">
 <img width="60%" src="https://user-images.githubusercontent.com/95289188/184933422-e4041931-16f5-4e21-a495-fb711826c0e0.png">
@@ -49,8 +48,8 @@
  
 <h1 align="center">II) SAVE PAGE </h1>
 
-- When you come across a webpage that you wanna refer later on or save for future comparison, just click "SAVE PAGE" on the extension window
-- SAVE PAGE grabs the URL of the website and saves it in the form of a stack where each block has an editable note box embedded with it
+- On clicking 'SAVE PAGE' the URL of the website is fetched and saved in blocks which has an editable note box embedded with it
+- Saved pages are stored in local storage as well, that way data is not lost after closing the browser
 
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184931187-6b6b4a0b-70d3-4ad5-8e1a-da4e69dc51a3.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184951339-ffcf483f-8755-46b6-8238-98e27cff758c.png"> 
 
@@ -74,7 +73,7 @@
 
 - This special feature makes reference to saved tabs even more convenient!
 - The note box can be opened by clicking the "Pencil" icon
-- The note box consists of an "edit" button, a cross icon and a text area
+- It consists of an "edit" button, a cross icon and a text area
 - You can close the note box by clicking the cross icon on top-right
 - A text editor box opens up by clicking the "edit" button where we can add short notes!
 - After entering text, we can either hit "Enter" or click the "save" button to save the input text
@@ -109,7 +108,7 @@
 <h1 align="center">IV) DELETE SAVED TABS</h1>
 
 - Wanna remove a saved tab? Just click on the 'Dustbin' icon corresponding to the saved link box, that's how easy it is!😄
-- Deleting any particular data simultaneously alters and saves data in local storage hence data won’t be lost after closing the browser
+- Deleting any particular data simultaneously alters and saves data in local storage!
   
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185208951-e7e0d222-958e-47be-bb49-4f811dad099e.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/185208902-0c3bae4a-f11f-435c-baf5-d8f3cde684fb.png">
 
@@ -154,8 +153,8 @@
   
 <h1 align="center">V) HEADING TO PAGE LOCATION</h1>
   
-- Navigating to different pages for reference one has to just click on the link box 
-- Note: For further reference one can also refer to short notes written in its corresponding notebox😉
+- On clicking the link box, one can navigate to the corresponding webpage
+- Note: For further reference one can also refer to short notes written in its corresponding note box😉
   
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185153269-e61b0f9c-6476-4c47-96ba-ed00db2fa11a.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/185153290-38998d44-38e1-4803-b2dd-9693740a9ad2.png">
   
