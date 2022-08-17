@@ -12,10 +12,16 @@
 - ❤In addition to that one can also pin certain product links on the top of the list! 🚀that makes sorting down our wishlist more convenient! :)
 
 
-<h1 align="center">I) PREFACE<h1>
+<h1 align="center">I) PREFACE</h1>
 
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184949020-945343b9-fa79-4610-87c4-899e29841384.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184949012-f9090f54-6a19-4fb0-bcb8-d3a192088fcd.png"> 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -28,8 +34,18 @@
 <div align="center">
 <img width="60%" src="https://user-images.githubusercontent.com/95289188/184933422-e4041931-16f5-4e21-a495-fb711826c0e0.png">
 </div>
-  
-<h1 align="center">II) SAVE PAGE <h1>
+ 
+<br>
+<br>
+<br>
+<br>
+ 
+ 
+<h1 align="center">II) SAVE PAGE </h1>
+
+- When you come across a webpage that you can refer to later on or save them for future comparision, just click "SAVE PAGE" on the extension window
+- SAVE PAGE grabs the URL of the website and saves it in the form of stack where each block has an editable notebox embedded with it
+- 
 
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184931187-6b6b4a0b-70d3-4ad5-8e1a-da4e69dc51a3.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184951339-ffcf483f-8755-46b6-8238-98e27cff758c.png"> 
 
@@ -41,11 +57,31 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
   
-<h1 align="center">III) ADD NOTES!<h1>
+<h1 align="center">III) ADD NOTES!</h1>
+
+- This is that special feature making reference to saved tabs even more convenient!
+- The notebox can be opened by clicking the "Pencil" icon
+- Notebox consists of an "edit" button, cross icon and a text area
+- You can close the notebox by clicking the cross icon on top-right
+- A text editor box opens up on clicking "edit" button where we can add short notes!
+- After entering text, we can either hit "Enter" or click "save" button to save the input text
+- All the notes are stored to corresponding saved tab in the local storage as strings
   
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184952198-9ead30b8-3120-48e8-a53a-6e69ea619a2a.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184952254-004edb57-698c-4ee0-9b63-c08569787c6d.png">
   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -59,9 +95,37 @@
 <img width="60%" src="https://user-images.githubusercontent.com/95289188/185060474-4b5c163a-747d-4c76-bf7e-2811f6f68fcf.png">
 </div>
 
+<br>
+<br>
+<br>
+<br>
+
+<h1 align="center">IV) DELETE SAVED TABS</h1>
+
+- Wanna remove a saved tab? Just click on the 'Dustbin' icon corresponding to the saved linkbox, that's how easy it is!😄
+- Deleting any particular data simulaneously alters and saves data in local storage hence data wont be lost after closing the browser
   
-  
-<h1 align="center">IV) PIN SAVED TABS<h1>
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185208951-e7e0d222-958e-47be-bb49-4f811dad099e.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/185208902-0c3bae4a-f11f-435c-baf5-d8f3cde684fb.png">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+
+<h1 align="center">IV) PIN SAVED TABS</h1>
+
+- Often times we prefer some of the saved links to be on the top for convenience, and that's where you can just pin then on top!
+- Clicking the arrow icon enables one to pin saved tabs to the top
   
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185064566-1c6072fc-5723-4d86-b41e-87215ddb4dd2.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/185064526-4416b976-0c46-4120-9879-86db91d36b3e.png">
   
@@ -72,9 +136,18 @@
 <br>
 <br>
 <br>
-<br>  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>    
   
-<h1 align="center">V) HEADING TO PAGE LOCATION<h1>
+<h1 align="center">V) HEADING TO PAGE LOCATION</h1>
+  
+- Navigating to different pages for reference one has to just click on the link box 
+- Note: For further reference one can also refer short notes written in its corresponding notebox😉
   
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185153269-e61b0f9c-6476-4c47-96ba-ed00db2fa11a.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/185153290-38998d44-38e1-4803-b2dd-9693740a9ad2.png">
   
@@ -85,15 +158,30 @@
 <br>
 <br>
 <br>
-<br>  
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>    
   
-<h1 align="center">VI) ERASING SAVED DATA <h1>
-  
+<h1 align="center">VI) ERASING SAVED DATA </h1>
+
+- By double clicking the "ERASE ALL" button, one can erase all the saved tabs!
+- The local storage is cleared out doing so because of which the stored leads disappears
+
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185157230-f873b513-1c09-480a-a19d-10fa4cda46de.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/185157249-5a00706d-5e9b-4ea7-bc6f-30b37b0dc931.png">
   
   
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
