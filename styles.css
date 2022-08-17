@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:wght@300&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@100&family=Square+Peg&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
 /****************************SCROLL BAR***********************************/
 ::-webkit-scrollbar {
     width: 11px;
@@ -73,13 +78,12 @@ body{
 }
 .link-box{
     position: relative;
-    
     min-height: 30px;
     margin-top:2vh;
     margin-left:2vw;
     height: 6vh;
     width: 90vw;
-    background-color: rgba(0, 0, 0, 0.188);
+    background-color: rgba(0, 0, 0, 0.191);
     
 
 }
