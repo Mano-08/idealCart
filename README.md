@@ -12,7 +12,13 @@
 - ❤In addition to that, one can pin certain product links on the top of the list! 🚀that makes sorting down our wishlist more convenient! :)
 
 
-<h1 align="center">I) PREFACE</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1 align="center">I) PREFACE </h1>
 
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184949020-945343b9-fa79-4610-87c4-899e29841384.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184949012-f9090f54-6a19-4fb0-bcb8-d3a192088fcd.png"> 
 
@@ -43,12 +49,12 @@
  
 <h1 align="center">II) SAVE PAGE </h1>
 
-- When you come across a webpage that you can refer to later on or save for future comparison, just click "SAVE PAGE" on the extension window
+- When you come across a webpage that you wanna refer later on or save for future comparison, just click "SAVE PAGE" on the extension window
 - SAVE PAGE grabs the URL of the website and saves it in the form of a stack where each block has an editable note box embedded with it
-- 
 
 <img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184931187-6b6b4a0b-70d3-4ad5-8e1a-da4e69dc51a3.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184951339-ffcf483f-8755-46b6-8238-98e27cff758c.png"> 
 
+<br>
 <br>
 <br>
 <br>
@@ -121,6 +127,7 @@
 <br>
 <br>
 <br> 
+<br>
 
 <h1 align="center">IV) PIN SAVED TABS</h1>
 
@@ -142,7 +149,8 @@
 <br>
 <br>
 <br>
-<br>    
+<br>
+<br>
   
 <h1 align="center">V) HEADING TO PAGE LOCATION</h1>
   
@@ -165,6 +173,7 @@
 <br>
 <br>
 <br>    
+<br>
   
 <h1 align="center">VI) ERASING SAVED DATA </h1>
 
