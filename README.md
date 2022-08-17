@@ -128,7 +128,7 @@
 <br> 
 <br>
 
-<h1 align="center">IV) PIN SAVED TABS</h1>
+<h1 align="center">V) PIN SAVED TABS</h1>
 
 - Often, we prefer some of the saved links to be on the top for convenience, and that's where you can just pin them on top!
 - Clicking the arrow icon enables one to pin saved tabs to the top
@@ -151,7 +151,7 @@
 <br>
 <br>
   
-<h1 align="center">V) HEADING TO PAGE LOCATION</h1>
+<h1 align="center">VI) HEADING TO PAGE LOCATION</h1>
   
 - On clicking the link box, one can navigate to the corresponding webpage
 - Note: For further reference one can also refer to short notes written in its corresponding note box😉
@@ -174,7 +174,7 @@
 <br>    
 <br>
   
-<h1 align="center">VI) ERASING SAVED DATA </h1>
+<h1 align="center">VII) ERASING SAVED DATA </h1>
 
 - By double-clicking the "ERASE ALL" button, one can erase all the saved tabs!
 - The local storage is cleared out doing so because of which the stored leads disappear
