@@ -169,6 +169,7 @@ function EditEl(s) {
     document.getElementById(NoteBoxEditID).addEventListener('keypress', logKey);
     document.getElementById(NoteBoxEditID).style.display = "block"
     document.getElementById(NoteBoxEditID).value=`${myList[parseInt(NoteEditID)][1]}`
+    document.getElementById(NoteBoxEditID).focus()
     document.getElementById(NoteBox_open_ID).style.display = "none"
     document.getElementById(s).style.display = "none"
     document.getElementById(SaveID).style.display = "block"
