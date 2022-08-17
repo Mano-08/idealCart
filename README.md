@@ -56,15 +56,14 @@
 <br>
   
 <div align="center">
-<img width="60%" src="https://user-images.githubusercontent.com/95289188/185059017-db091207-0ee3-4cef-8877-d4db5d7d755d.png">
+<img width="60%" src="https://user-images.githubusercontent.com/95289188/185060474-4b5c163a-747d-4c76-bf7e-2811f6f68fcf.png">
 </div>
 
   
-<h1 align="center">IV) Delete Notes<h1>
-  
-<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184957835-d7ab4282-eadc-4731-8d0e-de1f36dca793.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184952254-004edb57-698c-4ee0-9b63-c08569787c6d.png">
   
 <h1 align="center">V) Pin Saved Tabs<h1>
+  
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185064566-1c6072fc-5723-4d86-b41e-87215ddb4dd2.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/185064526-4416b976-0c46-4120-9879-86db91d36b3e.png">
+  
  
-<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184957835-d7ab4282-eadc-4731-8d0e-de1f36dca793.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184952254-004edb57-698c-4ee0-9b63-c08
 
