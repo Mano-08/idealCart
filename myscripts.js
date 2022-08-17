@@ -72,16 +72,16 @@ function PinEl(s) {
     let linkEl = document.getElementById("link_no_0") 
     linkEl.style.background = "rgba(0, 0, 0, 0.388)"
     setTimeout(function() {
-        linkEl.style.background = "rgba(0, 0, 0, 0.348)"
+        linkEl.style.background = "rgba(0, 0, 0, 0.361)"
     }, 300)
     setTimeout(function() {
-        linkEl.style.background = "rgba(0, 0, 0, 0.308)"
+        linkEl.style.background = "rgba(0, 0, 0, 0.334)"
     }, 350)
     setTimeout(function() {
-        linkEl.style.background = "rgba(0, 0, 0, 0.268)"
+        linkEl.style.background = "rgba(0, 0, 0, 0.307)"
     }, 400)
     setTimeout(function() {
-        linkEl.style.background = "rgba(0, 0, 0, 0.228)"
+        linkEl.style.background = "rgba(0, 0, 0, 0.280)"
     }, 450)
     setTimeout(function() {
         linkEl.removeAttribute("style")
