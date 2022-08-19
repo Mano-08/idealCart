@@ -50,7 +50,7 @@
 - On clicking 'SAVE PAGE' button, the URL of the website is fetched and saved in blocks which has an editable note box embedded in it
 - Saved pages are stored in local storage as well, that way data is not lost after closing the browser
 
-<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/184931187-6b6b4a0b-70d3-4ad5-8e1a-da4e69dc51a3.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184951339-ffcf483f-8755-46b6-8238-98e27cff758c.png"> 
+<img width="47%" align="left" src="https://user-images.githubusercontent.com/95289188/185613607-cdbc3bd3-a641-4545-8743-f27a14ef060c.png"><img width="47%" align="right" src="https://user-images.githubusercontent.com/95289188/184951339-ffcf483f-8755-46b6-8238-98e27cff758c.png"> 
 
 <br>
 <br>
