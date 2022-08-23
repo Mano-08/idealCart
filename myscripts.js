@@ -5,6 +5,10 @@ const listFromLocalStorage = JSON.parse(localStorage.getItem("myList"))
 const clearEl = document.getElementById("erase-btn")
 const desertEl = document.getElementById("desert-img")
 const containerBackgroundEl = document.getElementById("container")
+const container_1 = document.getElementById("gray-container-1")
+const container_2 = document.getElementById("gray-container-2")
+const container_3 = document.getElementById("gray-container-3")
+
 
 // Function to render the List 
 function render(aList) {
@@ -61,9 +65,9 @@ function render(aList) {
 
 // Function to pin linkbox on top 
 function PinEl(s) {
-    let theLength = s.length
+    let length = s.length
     // ID of the delete button clicked
-    let pinID = parseInt(s.slice(8,theLength))
+    let pinID = parseInt(s.slice(8,length))
     let pinVal = myList[pinID]
     myList = myList.slice(0,pinID).concat(myList.slice(pinID+1,myList.length))
     myList.splice(0, 0, pinVal)
@@ -91,17 +95,32 @@ function PinEl(s) {
 
 // Function to delete a particular link_box
 function delEl(s) {
-    let length_ = s.length
+    let length = s.length
     // ID of the delete button clicked
-    let delID = parseInt(s.slice(8,length_))
+    let delID = parseInt(s.slice(8,length))
+    let linkEl = document.getElementById(`link_no_${delID}`) 
+    setTimeout(function() {
+        linkEl.style.opacity = "0.8"
+    }, 80)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.6"
+    }, 160)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.4"
+    }, 240)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.2"
+    }, 320)
+    setTimeout(function() {
+        myList = myList.slice(0,delID).concat(myList.slice(delID+1,myList.length))
+        render(myList)
+        localStorage.setItem("myList", JSON.stringify(myList) )
+        if (myList.length == 0) {
+            containerBackgroundEl.style.display = "none"
+            desertEl.style.display = "block"
+        }
+    }, 400)
     
-    myList = myList.slice(0,delID).concat(myList.slice(delID+1,myList.length))
-    render(myList)
-    localStorage.setItem("myList", JSON.stringify(myList) )
-    if (myList.length == 0) {
-        containerBackgroundEl.style.display = "none"
-        desertEl.style.display = "block"
-    }
 
     
 }
@@ -109,25 +128,42 @@ function delEl(s) {
 
 // Function to bring up Note Box
 function NoteEl(s) {
-    let length1 = s.length
+    let length = s.length
     // ID of the delete button clicked
-    let NoteID = parseInt(s.slice(8,length1))
-    let NoteBoxID = "notebox_no_" + NoteID.toString()
-    document.getElementById(NoteBoxID).style.display = "block"
+    let NoteID = parseInt(s.slice(8,length))
+    let linkEl = document.getElementById("notebox_no_" + NoteID.toString()) 
+    linkEl.style.opacity = "0"
+    linkEl.style.display = "block"
+    setTimeout(function() {
+        linkEl.style.opacity = "0.2"
+    }, 55)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.4"
+    }, 110)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.6"
+    }, 165)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.8"
+    }, 220)
+    setTimeout(function() {
+        linkEl.style.opacity = "1"
+    }, 275)
+    
     if (myList.length>=3){
         if (NoteID>=2) {
             
             if (NoteID==2 || NoteID==myList.length - 3) {
-                document.getElementById("gray-container-1").style.display = "block"
-                document.getElementById("gray-container-1").style.height = "20vh"
+                container_1.style.display = "block"
+                container_1.style.height = "15vh"
             }
             else if (NoteID==3 || NoteID==myList.length - 2) {
-                document.getElementById("gray-container-2").style.display = "block"
-                document.getElementById("gray-container-2").style.height = "30vh"
+                container_2.style.display = "block"
+                container_2.style.height = "30vh"
             }
             else {
-                document.getElementById("gray-container-3").style.display = "block"
-                document.getElementById("gray-container-3").style.height = "45vh"
+                container_3.style.display = "block"
+                container_3.style.height = "45vh"
             }
         }
     }
@@ -139,39 +175,53 @@ function NoteEl(s) {
 function NoteDelEl(s) {
     let length2 = s.length
     // ID of the delete button clicked
-    let NoteDelID = s.slice(8,length2)
-    let NoteBoxDelID = "notebox_no_" + NoteDelID
-    let NoteBox_open_ID = "note_box_" + NoteDelID
-    let NoteBoxEditID = "edit_box_" + NoteDelID
-    let save_id = "save_btn" + NoteDelID
-    let edit_id = "edit_btn" + NoteDelID
-    document.getElementById(NoteBoxEditID).value = null
-    document.getElementById(save_id).style.display = "none"
-    document.getElementById(edit_id).style.display = "block"
-    document.getElementById(NoteBoxEditID).style.display = "none"
-    document.getElementById(NoteBox_open_ID).style.display = "block"
-    document.getElementById(NoteBoxDelID).style.display = "none"
-    if (myList.length>=3){
-        if (parseInt(NoteDelID)>=2) {
-            if (parseInt(NoteDelID)==2 || parseInt(NoteDelID)==myList.length - 3) {
-                document.getElementById("gray-container-1").style.display = "none"
-            }
-            else if (parseInt(NoteDelID)==3 || parseInt(NoteDelID)==myList.length - 2) {
-                document.getElementById("gray-container-2").style.display = "none"
+    let NoteDelID = s.slice(8,length2)    
+    let linkEl = document.getElementById(`notebox_no_${s.slice(8,length2)}`) 
+    linkEl.style.opacity = "1"
+    setTimeout(function() {
+        linkEl.style.opacity = "0.8"
+    }, 55)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.6"
+    }, 110)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.4"
+    }, 165)
+    setTimeout(function() {
+        linkEl.style.opacity = "0.2"
+    }, 220)
+    setTimeout(function() {
+        document.getElementById("edit_box_" + NoteDelID).value = null
+        document.getElementById("save_btn" + NoteDelID).style.display = "none"
+        document.getElementById("edit_btn" + NoteDelID).style.display = "block"
+        document.getElementById("edit_box_" + NoteDelID).style.display = "none"
+        document.getElementById("note_box_" + NoteDelID).style.display = "block"
+        document.getElementById("notebox_no_" + NoteDelID).style.display = "none"
+        if (myList.length>=3){
+            if (parseInt(NoteDelID)>=2) {
+                if (parseInt(NoteDelID)==2 || parseInt(NoteDelID)==myList.length - 3) {
+                    container_1.style.display = "none"
+                }
+                else if (parseInt(NoteDelID)==3 || parseInt(NoteDelID)==myList.length - 2) {
+                    container_2.style.display = "none"
+                }
+                else {
+                    container_3.style.display = "none"
+                }
             }
             else {
-                document.getElementById("gray-container-3").style.display = "none"
+                container_1.style.display = "none"
+                container_2.style.display = "none"
+                container_3.style.display = "none"
             }
         }
-        else {
-            document.getElementById("gray-container-1").style.display = "none"
-            document.getElementById("gray-container-2").style.display = "none"
-            document.getElementById("gray-container-3").style.display = "none"
-        }
-    }
+
+    }, 275)
+    
     
 }
 
+// To save the notes with enter key
 function logKey(e) {
     if (e.code == "Enter") {
         let y = e.target.parentElement.id
@@ -184,16 +234,14 @@ function EditEl(s) {
     let length3 = s.length
     // ID of the delete button clicked
     let NoteEditID = s.slice(8,length3)
-    let NoteBox_open_ID = "note_box_" + NoteEditID
-    let NoteBoxEditID = "edit_box_" + NoteEditID
-    let SaveID = "save_btn" + NoteEditID
-    document.getElementById(NoteBoxEditID).addEventListener('keypress', logKey);
-    document.getElementById(NoteBoxEditID).style.display = "block"
-    document.getElementById(NoteBoxEditID).value=`${myList[parseInt(NoteEditID)][1]}`
-    document.getElementById(NoteBoxEditID).focus()
-    document.getElementById(NoteBox_open_ID).style.display = "none"
+    let noteBoxEl = document.getElementById("edit_box_" + NoteEditID)
+    noteBoxEl.addEventListener('keypress', logKey);
+    noteBoxEl.style.display = "block"
+    noteBoxEl.value=`${myList[parseInt(NoteEditID)][1]}`
+    noteBoxEl.focus()
+    document.getElementById("note_box_" + NoteEditID).style.display = "none"
     document.getElementById(s).style.display = "none"
-    document.getElementById(SaveID).style.display = "block"
+    document.getElementById("save_btn" + NoteEditID).style.display = "block"
     
 }
 
@@ -249,9 +297,7 @@ const onClick = (event) => {
         if (idClicked.slice(0,8)=="move_no_") {
             PinEl(idClicked)
         }
-        else {
-            
-        }
+        
     } 
 }
 
@@ -277,5 +323,4 @@ clearEl.addEventListener("dblclick", function() {
     render(myList)
     desertEl.style.display = "block"
     containerBackgroundEl.style.display = "none"
-
 })
