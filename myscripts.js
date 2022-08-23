@@ -116,15 +116,18 @@ function NoteEl(s) {
     document.getElementById(NoteBoxID).style.display = "block"
     if (myList.length>=3){
         if (NoteID>=2) {
-            document.getElementById("gray-container").style.display = "block"
+            
             if (NoteID==2 || NoteID==myList.length - 3) {
-                document.getElementById("gray-container").style.height = "10vh"
+                document.getElementById("gray-container-1").style.display = "block"
+                document.getElementById("gray-container-1").style.height = "10vh"
             }
             else if (NoteID==3 || NoteID==myList.length - 2) {
-                document.getElementById("gray-container").style.height = "30vh"
+                document.getElementById("gray-container-2").style.display = "block"
+                document.getElementById("gray-container-2").style.height = "30vh"
             }
             else {
-                document.getElementById("gray-container").style.height = "40vh"
+                document.getElementById("gray-container-3").style.display = "block"
+                document.getElementById("gray-container-3").style.height = "40vh"
             }
         }
     }
@@ -148,7 +151,25 @@ function NoteDelEl(s) {
     document.getElementById(NoteBoxEditID).style.display = "none"
     document.getElementById(NoteBox_open_ID).style.display = "block"
     document.getElementById(NoteBoxDelID).style.display = "none"
-    document.getElementById("gray-container").style.display = "none"
+    if (myList.length>=3){
+        if (parseInt(NoteDelID)>=2) {
+            if (parseInt(NoteDelID)==2 || parseInt(NoteDelID)==myList.length - 3) {
+                document.getElementById("gray-container-1").style.display = "none"
+            }
+            else if (parseInt(NoteDelID)==3 || parseInt(NoteDelID)==myList.length - 2) {
+                document.getElementById("gray-container-2").style.display = "none"
+            }
+            else {
+                document.getElementById("gray-container-3").style.display = "none"
+            }
+        }
+        else {
+            document.getElementById("gray-container-1").style.display = "none"
+            document.getElementById("gray-container-2").style.display = "none"
+            document.getElementById("gray-container-3").style.display = "none"
+        }
+    }
+    
 }
 
 function logKey(e) {
