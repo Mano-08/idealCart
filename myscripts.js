@@ -101,16 +101,16 @@ function delEl(s) {
     let linkEl = document.getElementById(`link_no_${delID}`) 
     setTimeout(function() {
         linkEl.style.opacity = "0.8"
-    }, 80)
+    }, 70)
     setTimeout(function() {
         linkEl.style.opacity = "0.6"
-    }, 160)
+    }, 140)
     setTimeout(function() {
         linkEl.style.opacity = "0.4"
-    }, 240)
+    }, 210)
     setTimeout(function() {
         linkEl.style.opacity = "0.2"
-    }, 320)
+    }, 280)
     setTimeout(function() {
         myList = myList.slice(0,delID).concat(myList.slice(delID+1,myList.length))
         render(myList)
@@ -119,7 +119,7 @@ function delEl(s) {
             containerBackgroundEl.style.display = "none"
             desertEl.style.display = "block"
         }
-    }, 400)
+    }, 390)
     
 
     
@@ -251,9 +251,7 @@ function SaveBtn(s) {
     let length4 = s.length
     // ID of the delete button clicked
     let NoteSaveID = s.slice(8,length4)
-    let NoteBox_ID = "note_box_" + NoteSaveID
     let NoteBoxEdit_ID = "edit_box_" + NoteSaveID
-    let Edit_ID = "edit_btn" + NoteSaveID
     myList[parseInt(NoteSaveID)][1] = document.getElementById(NoteBoxEdit_ID).value
     localStorage.setItem("myList", JSON.stringify(myList) )
     render(myList)
@@ -312,15 +310,57 @@ saveEl.addEventListener("click", function(){
         myList.push([tabs[0].url,"null"])
         localStorage.setItem("myList", JSON.stringify(myList) )
         render(myList)
+        let linkEl = document.getElementById(`link_no_${myList.length-1}`)
+        linkEl.style.opacity = "0"
+        setTimeout(function() {
+            linkEl.style.opacity = "0.2"
+        }, 55)
+        setTimeout(function() {
+            linkEl.style.opacity = "0.4"
+        }, 110)
+        setTimeout(function() {
+            linkEl.style.opacity = "0.6"
+        }, 165)
+        setTimeout(function() {
+            linkEl.style.opacity = "0.8"
+        }, 220)
+        setTimeout(function() {
+            linkEl.style.opacity = "1"
+        }, 275)
     })
 })
 
 
 //To erase all the tabs on clicking `erase all` button
 clearEl.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myList = []
-    render(myList)
-    desertEl.style.display = "block"
-    containerBackgroundEl.style.display = "none"
+    if (myList.length != 0) {
+        let linkEl = document.querySelector(".container")
+        
+        setTimeout(function() {
+            linkEl.style.opacity = "0.7"
+        }, 80)
+        setTimeout(function() {
+            linkEl.style.opacity = "0.4"
+            
+        }, 160)
+        setTimeout(function() {
+            linkEl.style.opacity = "0.1"
+            localStorage.clear()
+            myList = []
+            render(myList)
+            desertEl.style.display = "block"
+            containerBackgroundEl.style.display = "none"
+        }, 240)
+        setTimeout(function() {
+            linkEl.style.opacity = "0.4"
+        }, 320)
+        setTimeout(function() {
+            linkEl.style.opacity = "0.7"
+        }, 400)
+        setTimeout(function() {
+            linkEl.style.opacity = "1"
+        }, 480)
+    }
+    
+    
 })
