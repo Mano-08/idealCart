@@ -119,7 +119,7 @@ function NoteEl(s) {
             
             if (NoteID==2 || NoteID==myList.length - 3) {
                 document.getElementById("gray-container-1").style.display = "block"
-                document.getElementById("gray-container-1").style.height = "10vh"
+                document.getElementById("gray-container-1").style.height = "20vh"
             }
             else if (NoteID==3 || NoteID==myList.length - 2) {
                 document.getElementById("gray-container-2").style.display = "block"
@@ -127,7 +127,7 @@ function NoteEl(s) {
             }
             else {
                 document.getElementById("gray-container-3").style.display = "block"
-                document.getElementById("gray-container-3").style.height = "40vh"
+                document.getElementById("gray-container-3").style.height = "45vh"
             }
         }
     }
