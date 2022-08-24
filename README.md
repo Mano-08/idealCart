@@ -1,4 +1,4 @@
-# ideal-Cart
+# idealCart
 
 ### 🛒An ideal Cart for universal online purchase
 
