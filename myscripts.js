@@ -101,16 +101,16 @@ function delEl(s) {
     let linkEl = document.getElementById(`link_no_${delID}`) 
     setTimeout(function() {
         linkEl.style.opacity = "0.8"
-    }, 70)
+    }, 60)
     setTimeout(function() {
         linkEl.style.opacity = "0.6"
-    }, 140)
+    }, 120)
     setTimeout(function() {
         linkEl.style.opacity = "0.4"
-    }, 210)
+    }, 180)
     setTimeout(function() {
         linkEl.style.opacity = "0.2"
-    }, 280)
+    }, 240)
     setTimeout(function() {
         myList = myList.slice(0,delID).concat(myList.slice(delID+1,myList.length))
         render(myList)
@@ -119,7 +119,7 @@ function delEl(s) {
             containerBackgroundEl.style.display = "none"
             desertEl.style.display = "block"
         }
-    }, 390)
+    }, 350)
     
 
     
