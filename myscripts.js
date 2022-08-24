@@ -237,7 +237,12 @@ function EditEl(s) {
     let noteBoxEl = document.getElementById("edit_box_" + NoteEditID)
     noteBoxEl.addEventListener('keypress', logKey);
     noteBoxEl.style.display = "block"
-    noteBoxEl.value=`${myList[parseInt(NoteEditID)][1]}`
+    if(myList[parseInt(NoteEditID)][1]=="null") {
+        noteBoxEl.value = ""
+    }
+    else{
+        noteBoxEl.value=`${myList[parseInt(NoteEditID)][1]}`
+    }
     noteBoxEl.focus()
     document.getElementById("note_box_" + NoteEditID).style.display = "none"
     document.getElementById(s).style.display = "none"
