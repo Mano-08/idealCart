@@ -321,16 +321,17 @@ body{
 }
 
 #ideal-cart{
+    color:rgba(99, 21, 85, 0.949);
     font-size:1rem;
     font-weight: 800;
     font-family: 'Cedarville Cursive', cursive;
-    
+    cursor: context-menu;
     position: absolute;
     left:76vw;
     bottom:2.3vh;
-    opacity:0.47;
+    opacity:0.77;
 }
 
 #ideal-cart:hover {
-    opacity: 0.61;
+    opacity: 0.91;
 }
