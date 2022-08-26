@@ -30,7 +30,7 @@ function render(aList) {
         let idNote = "note_no_" + i_str
         let idNoteBox = "notebox_no_" + i_str
         let idMove = "move_no_" + i_str
-        let string_ = aList[i][0].slice(0,38)
+        let string_ = aList[i][0].slice(8,46)
         listItems += `
             
             <div class="link-box" id="${idLink}">
