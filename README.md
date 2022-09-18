@@ -11,6 +11,9 @@
 - 🛒ideal-Cart serves as an 'Add-To-Cart' bucket where you get to save product URL along with some ✨short notes for reference!
 - ❤In addition to that, one can pin certain product links on the top of the list! 🚀that makes sorting down our wish list more convenient! :)
 
+# Try it out: 
+
+### https://chrome.google.com/webstore/detail/idealcart/ofbkfkeekmaiigkhoinhlknpniijddba?hl=en-US
 
 <br>
 <br>
