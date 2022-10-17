@@ -311,6 +311,7 @@ window.addEventListener('click', onClick)
 
 //To save the tab on clicking `save page` button
 saveEl.addEventListener("click", function(){    
+
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         myList.push([tabs[0].url,"null"])
         localStorage.setItem("myList", JSON.stringify(myList) )
