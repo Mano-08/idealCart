@@ -7,7 +7,7 @@ function Compare() {
       className="grow p-5 bg-white rounded-b-md outline-none"
       value="tab2"
     >
-      jshrvgfeud
+      <div className="w-full h-full text-2xl bg-teal-100 font-thin">Tab2</div>
     </Tabs.Content>
   );
 }
