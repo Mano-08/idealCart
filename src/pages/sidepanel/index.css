@@ -16,10 +16,15 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: "Sora", sans-serif;
 }
 
 img {
   cursor: default;
+  user-select: none;
+}
+button {
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
