@@ -6,7 +6,9 @@ export type sortableType = {
     productURL: string;
     imageURL: string;
     title: string;
+    notes: string;
   };
   index: number;
+  SaveNotes: (index: number, notes: string) => void;
   deleteProduct: any;
 };

@@ -16,7 +16,7 @@ function MyProducts() {
   const [isSortable, setIsSortable] = useState(false);
 
   useEffect(() => {
-    chrome.storage.local.get("idealCartProducts", (result) => {
+    chrome.storage.sync.get("idealCartProducts", (result) => {
       result.idealCartProducts && setProducts(result.idealCartProducts);
     });
   }, []);
@@ -25,7 +25,7 @@ function MyProducts() {
     return new Promise<void>((resolve) => {
       setProducts((prev) => {
         const updatedProducts = prev.filter((_, i) => i !== index);
-        chrome.storage.local.set({ idealCartProducts: updatedProducts });
+        chrome.storage.sync.set({ idealCartProducts: updatedProducts });
         resolve();
         return updatedProducts;
       });
@@ -39,7 +39,7 @@ function MyProducts() {
         const activeIndex = items.findIndex((item) => item.id === active.id);
         const overIndex = items.findIndex((item) => item.id === over.id);
         const finalArray = arrayMove(items, activeIndex, overIndex);
-        chrome.storage.local.set({ idealCartProducts: finalArray });
+        chrome.storage.sync.set({ idealCartProducts: finalArray });
         return finalArray;
       });
     }
@@ -61,10 +61,11 @@ function MyProducts() {
       id: pageURL,
       productURL: pageURL,
       imageURL: imageURL,
-      title: pageTitle || "title",
+      title: pageTitle || "Title",
+      notes: "",
     };
     setProducts((prev) => {
-      chrome.storage.local.set({
+      chrome.storage.sync.set({
         idealCartProducts: [...prev, newProduct],
       });
       return [...prev, newProduct];
@@ -83,6 +84,17 @@ function MyProducts() {
       if (request.message === "addToCart-Data") {
         updateProducts(request.data);
       }
+    });
+  };
+
+  const handleSaveNotes = async (index: number, notes: string) => {
+    return new Promise<void>((resolve) => {
+      setProducts((prev) => {
+        prev[index].notes = notes;
+        chrome.storage.sync.set({ idealCartProducts: prev });
+        resolve();
+        return prev;
+      });
     });
   };
 
@@ -109,6 +121,7 @@ function MyProducts() {
                   index={index}
                   data={language}
                   sortable={isSortable}
+                  SaveNotes={handleSaveNotes}
                   deleteProduct={handleDeleteProduct}
                 />
               ))
@@ -120,24 +133,24 @@ function MyProducts() {
       <div className="w-full grow flex flex-row gap-2 p-2 justify-end items-center font-semibold text-white text-xs">
         <button
           onClick={handleAddToCart}
-          className="hover:bg-zinc-200 bg-zinc-100 opacity-80 rounded-md flex items-center justify-center h-9 w-9"
+          className="hover:bg-zinc-200 bg-zinc-100 rounded-md flex items-center justify-center h-9 w-9"
         >
           <img
             src={addToCart}
             alt="sort products"
-            className="cursor-pointer w-6 h-6 object-contain"
+            className="cursor-pointer w-6 h-6 object-contain opacity-75"
           />
         </button>
         <button
           onClick={() => setIsSortable((prev) => !prev)}
           className={`${
             isSortable ? "bg-zinc-200" : "bg-zinc-100 hover:bg-zinc-200"
-          } opacity-80 rounded-md flex items-center justify-center h-9 w-9`}
+          } rounded-md flex items-center justify-center h-9 w-9`}
         >
           <img
             src={sort}
             alt="sort products"
-            className="cursor-pointer w-6 h-6 object-contain"
+            className="cursor-pointer w-6 h-6 object-contain opacity-75"
           />
         </button>
       </div>
