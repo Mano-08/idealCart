@@ -111,7 +111,7 @@ export function SortableItem({
           <img
             src={data.imageURL === "" ? product : data.imageURL}
             alt={data.title}
-            className="w-24 h-24 object-cover rounded-lg cursor-grab"
+            className="w-24 h-24 object-cover rounded-lg cursor-pointer"
           />
           <div className="grow">{data.title}</div>
         </a>

@@ -36,10 +36,20 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #969696;
+  background: #b9b9b9;
   border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(121, 121, 121) b3b;
+  background: rgb(156, 156, 156) b3b;
+}
+
+::-moz-selection {
+  color: rgb(0, 0, 0);
+  background: rgb(217, 217, 217);
+}
+
+::selection {
+  color: rgb(0, 0, 0);
+  background: rgb(217, 217, 217);
 }

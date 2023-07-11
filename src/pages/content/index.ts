@@ -8,8 +8,8 @@ sidePanel.classList.add("sidepanelIdealCart");
 sidePanel.style.visibility = "hidden";
 sidePanel.style.opacity = "0";
 sidePanel.style.right = "-40px";
-sidePanel.style.height = "30rem"; // User should be able to adjust HEIGHT in settings page
-sidePanel.style.width = "28rem"; // User should be able to adjust WIDTH in settings page
+sidePanel.style.height = "480px"; // User should be able to adjust HEIGHT in settings page
+sidePanel.style.width = "448px"; // User should be able to adjust WIDTH in settings page
 
 document.body.appendChild(sidePanel);
 
