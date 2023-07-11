@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
-import sort from "../../../assets/img/sorting.png";
-import addToCart from "../../../assets/img/addToCart.png";
-import * as Tabs from "@radix-ui/react-tabs";
-import { SortableItem } from "./SortableItem";
 import { DndContext, closestCenter } from "@dnd-kit/core";
+import addToCart from "../../../assets/img/addToCart.png";
+import sort from "../../../assets/img/sorting.png";
+import React, { useEffect, useState } from "react";
+import { SortableItem } from "./SortableItem";
+import toast from "react-hot-toast";
 import {
   arrayMove,
   SortableContext,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-import toast from "react-hot-toast";
 
 function MyProducts() {
   const [products, setProducts] = useState([]);
@@ -56,18 +55,18 @@ function MyProducts() {
       toast.error("Product already added to cart!");
       return;
     }
-
     const newProduct = {
       id: pageURL,
       productURL: pageURL,
       imageURL: imageURL,
-      title: pageTitle || "Title",
+      title: pageTitle,
       notes: "",
     };
     setProducts((prev) => {
       chrome.storage.sync.set({
         idealCartProducts: [...prev, newProduct],
       });
+      toast.success("Product added to cart!");
       return [...prev, newProduct];
     });
   }
@@ -98,13 +97,18 @@ function MyProducts() {
     });
   };
 
+  const handleSortable = () => {
+    if (products.length === 0) {
+      setIsSortable(false);
+    } else {
+      setIsSortable((prev) => !prev);
+    }
+  };
+
   return (
-    <Tabs.Content
-      className="grow p-4 pb-0 bg-white rounded-b-md outline-none"
-      value="tab1"
-    >
+    <div className="flex flex-col p-4 pb-0 bg-white rounded-b-md outline-none">
       <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-        <div className="flex flex-col gap-2 h-[75vh] w-full p-1 overflow-x-hidden overflow-y-scroll">
+        <div className="flex flex-col h-[22.75rem] gap-2 w-full p-1 overflow-x-hidden overflow-y-scroll">
           <SortableContext
             items={products}
             strategy={verticalListSortingStrategy}
@@ -130,7 +134,7 @@ function MyProducts() {
         </div>
       </DndContext>
 
-      <div className="w-full grow flex flex-row gap-2 p-2 justify-end items-center font-semibold text-white text-xs">
+      <div className="w-full flex flex-row gap-2 p-2 justify-end items-center font-semibold text-white text-xs">
         <button
           onClick={handleAddToCart}
           className="hover:bg-zinc-200 bg-zinc-100 rounded-md flex items-center justify-center h-9 w-9"
@@ -142,7 +146,7 @@ function MyProducts() {
           />
         </button>
         <button
-          onClick={() => setIsSortable((prev) => !prev)}
+          onClick={handleSortable}
           className={`${
             isSortable ? "bg-zinc-200" : "bg-zinc-100 hover:bg-zinc-200"
           } rounded-md flex items-center justify-center h-9 w-9`}
@@ -154,7 +158,7 @@ function MyProducts() {
           />
         </button>
       </div>
-    </Tabs.Content>
+    </div>
   );
 }
 

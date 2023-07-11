@@ -1,4 +1,4 @@
-import { createContextMenu } from "./utils/AddContext";
+// import { createContextMenu } from "./utils/AddContext";
 import { captureOGImage } from "./utils/ogImage";
 
 // Create an iframe for SidePanel
@@ -8,6 +8,8 @@ sidePanel.classList.add("sidepanelIdealCart");
 sidePanel.style.visibility = "hidden";
 sidePanel.style.opacity = "0";
 sidePanel.style.right = "-40px";
+sidePanel.style.height = "30rem"; // User should be able to adjust HEIGHT in settings page
+sidePanel.style.width = "28rem"; // User should be able to adjust WIDTH in settings page
 
 document.body.appendChild(sidePanel);
 
@@ -27,7 +29,6 @@ function captureData() {
   const pageTitle = document.title;
   const pageURL = window.location.href;
   const imageURL = captureOGImage(pageURL);
-
   return { pageTitle, pageURL, imageURL };
 }
 
@@ -51,13 +52,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
-document.addEventListener("click", (e) => {
-  const targetElement = e.target as HTMLElement;
-  if (!sidePanel.contains(targetElement)) {
-    sidePanel.style.visibility = "hidden";
-    sidePanel.style.opacity = "0";
-    sidePanel.style.right = "-40px";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const handleClickOutside = (e: MouseEvent) => {
+    const targetElement = e.target as HTMLElement;
+    if (!sidePanel.contains(targetElement)) {
+      sidePanel.style.visibility = "hidden";
+      sidePanel.style.opacity = "0";
+      sidePanel.style.right = "-40px";
+    }
+  };
+  document.addEventListener("click", handleClickOutside);
+  return () => document.removeEventListener("click", handleClickOutside);
 });
 
-createContextMenu();
+// createContextMenu();

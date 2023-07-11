@@ -1,14 +1,10 @@
 import React from "react";
-import * as Tabs from "@radix-ui/react-tabs";
 
 function Compare() {
   return (
-    <Tabs.Content
-      className="grow p-5 bg-white rounded-b-md outline-none"
-      value="tab2"
-    >
-      <div className="w-full h-full text-2xl bg-teal-100 font-thin">Tab2</div>
-    </Tabs.Content>
+    <div className="flex flex-col h-full p-4 pb-0 bg-white rounded-b-md outline-none">
+      <div className="h-full w-full grow bg-teal-400 p-3">Tab 2</div>
+    </div>
   );
 }
 

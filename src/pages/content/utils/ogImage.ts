@@ -6,7 +6,8 @@ export function captureOGImage(pageUrl: string) {
   switch (findWebsite(pageUrl)) {
     case "amazon":
       imageURL = (document.getElementById("landingImage") as HTMLImageElement)
-        .src;
+        ? (document.getElementById("landingImage") as HTMLImageElement).src
+        : "";
       break;
     default:
       for (const tag of Array.from(document.getElementsByTagName("meta"))) {

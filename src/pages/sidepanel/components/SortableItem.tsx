@@ -29,7 +29,11 @@ export function SortableItem({
     const handleClickOutside = (e: any) => {
       const element = e.target as HTMLElement;
       if (
+        notesRef &&
+        notesRef.current &&
         !notesRef.current.contains(element) &&
+        editRef &&
+        editRef.current &&
         !editRef.current.contains(element)
       ) {
         setEditIndex(-1);
@@ -84,12 +88,12 @@ export function SortableItem({
       style={style}
       className={`${
         fade ? "opacity-0" : "opacity-100"
-      } bg-zinc-50 rounded-lg flex flex-row items-center shadow-sm ${
+      } bg-zinc-50 rounded-lg flex flex-row items-center justify-between shadow-sm ${
         sortable ? "cursor-grab" : "transition-all duration-500"
       }`}
     >
       {sortable ? (
-        <div className="flex flex-row grow items-center gap-3 p-2">
+        <div className="flex flex-row items-center gap-3 p-2">
           <img
             src={data.imageURL === "" ? product : data.imageURL}
             alt={data.title}
@@ -102,15 +106,14 @@ export function SortableItem({
           href={data.productURL}
           target="_blank"
           rel="noreferrer"
-          className="flex flex-row grow gap-3 cursor-pointer items-center p-2"
+          className="flex flex-row items-center gap-3 p-2"
         >
           <img
             src={data.imageURL === "" ? product : data.imageURL}
             alt={data.title}
-            className="w-24 h-24 object-cover rounded-lg cursor-pointer"
+            className="w-24 h-24 object-cover rounded-lg cursor-grab"
           />
-
-          <div className="grow cursor-pointer">{data.title}</div>
+          <div className="grow">{data.title}</div>
         </a>
       ) : (
         <div

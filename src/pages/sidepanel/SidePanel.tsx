@@ -15,7 +15,7 @@ function SidePanel() {
       <Tabs.List className="shrink-0 flex border-b border-mauve6">
         {tabs.map((element) => (
           <Tabs.Trigger
-            className="bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-[rgb(0,0,0,0.8)] select-none first:rounded-tl-md last:rounded-tr-md data-[state=active]:text-black data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current data-[state=active]:focus:relative outline-none cursor-default"
+            className="bg-white h-12 flex-1 flex items-center justify-center text-[1rem] leading-none text-[rgb(0,0,0,0.8)] select-none first:rounded-tl-md last:rounded-tr-md data-[state=active]:text-black data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current data-[state=active]:focus:relative outline-none cursor-default"
             value={element.tab}
             key={element.tab}
           >
@@ -23,8 +23,14 @@ function SidePanel() {
           </Tabs.Trigger>
         ))}
       </Tabs.List>
-      <MyProducts />
-      <Compare />
+
+      <Tabs.Content value="tab1">
+        <MyProducts />
+      </Tabs.Content>
+
+      <Tabs.Content value="tab2">
+        <Compare />
+      </Tabs.Content>
     </Tabs.Root>
   );
 }
