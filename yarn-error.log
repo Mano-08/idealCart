@@ -1,5 +1,5 @@
 Arguments: 
-  D:\Application Setup\NodeJS\node.exe C:\Users\Mano\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-hot-toast
+  D:\Application Setup\NodeJS\node.exe C:\Users\Mano\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js remove googlebard
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk-19\bin;C:\Program Files\Common Files\Oracle\Java\javapath;D:\Application Setup\NodeJS\;C:\Users\Mano\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Mano\AppData\Local\Programs\Python\Python310\;C:\Users\Mano\AppData\Local\Microsoft\WindowsApps;C:\Users\Mano\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\MongoDB\Server\6.0\bin;D:\Application Setup\heroku\bin;C:\Users\Mano\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: Invalid value type 1645:0 in D:\github\idealCart\idealCart.2.0\yarn.lock
+  SyntaxError: Invalid value type 1610:0 in D:\github\idealCart\idealCart.2.0\yarn.lock
       at Parser.unexpected (C:\Users\Mano\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:63491:11)
       at Parser.parse (C:\Users\Mano\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:63619:16)
       at Parser.parse (C:\Users\Mano\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:63596:26)
@@ -45,10 +45,10 @@ npm manifest:
       "@dnd-kit/sortable": "^7.0.2",
       "@radix-ui/react-tabs": "^1.0.4",
       "async-lock": "^1.4.0",
-      "googlebard": "^1.0.6",
       "node-fetch": "^3.3.1",
       "react": "18.2.0",
-      "react-dom": "18.2.0"
+      "react-dom": "18.2.0",
+      "react-hot-toast": "^2.4.1"
     },
     "devDependencies": {
       "@radix-ui/colors": "^0.1.8",
@@ -1681,15 +1681,6 @@ Lockfile:
       picocolors "^1.0.0"
       postcss-value-parser "^4.2.0"
   
-  axios@1.3.2:
-    version "1.3.2"
-    resolved "https://registry.npmjs.org/axios/-/axios-1.3.2.tgz"
-    integrity sha512-1M3O703bYqYuPhbHeya5bnhpYVsDDRyQSabNja04mZtboLNSuZ4YrltestrLXfHgmzua4TpUqRiVKbiQuo2epw==
-    dependencies:
-      follow-redirects "^1.15.0"
-      form-data "^4.0.0"
-      proxy-from-env "^1.1.0"
-  
   babel-jest@^29.0.0, babel-jest@^29.0.3:
     version "29.0.3"
     resolved "https://registry.npmmirror.com/babel-jest/-/babel-jest-29.0.3.tgz"
@@ -1759,11 +1750,6 @@ Lockfile:
     version "2.2.0"
     resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
     integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
-  
-  boolbase@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
-    integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
   
   brace-expansion@^1.1.7:
     version "1.1.11"
@@ -1877,31 +1863,6 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.npmjs.org/char-regex/-/char-regex-1.0.2.tgz"
     integrity sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==
-  
-  cheerio-select@^2.1.0:
-    version "2.1.0"
-    resolved "https://registry.npmjs.org/cheerio-select/-/cheerio-select-2.1.0.tgz"
-    integrity sha512-9v9kG0LvzrlcungtnJtpGNxY+fzECQKhK4EGJX2vByejiMX84MFNQw4UxPJl3bFbTMw+Dfs37XaIkCwTZfLh4g==
-    dependencies:
-      boolbase "^1.0.0"
-      css-select "^5.1.0"
-      css-what "^6.1.0"
-      domelementtype "^2.3.0"
-      domhandler "^5.0.3"
-      domutils "^3.0.1"
-  
-  cheerio@1.0.0-rc.12:
-    version "1.0.0-rc.12"
-    resolved "https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.12.tgz"
-    integrity sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
-    dependencies:
-      cheerio-select "^2.1.0"
-      dom-serializer "^2.0.0"
-      domhandler "^5.0.3"
-      domutils "^3.0.1"
-      htmlparser2 "^8.0.1"
-      parse5 "^7.0.0"
-      parse5-htmlparser2-tree-adapter "^7.0.0"
   
   chokidar@^3.5.3, "chokidar@>=3.0.0 <4.0.0":
     version "3.5.3"
@@ -2032,22 +1993,6 @@ Lockfile:
       shebang-command "^2.0.0"
       which "^2.0.1"
   
-  css-select@^5.1.0:
-    version "5.1.0"
-    resolved "https://registry.npmjs.org/css-select/-/css-select-5.1.0.tgz"
-    integrity sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==
-    dependencies:
-      boolbase "^1.0.0"
-      css-what "^6.1.0"
-      domhandler "^5.0.2"
-      domutils "^3.0.1"
-      nth-check "^2.0.1"
-  
-  css-what@^6.1.0:
-    version "6.1.0"
-    resolved "https://registry.npmjs.org/css-what/-/css-what-6.1.0.tgz"
-    integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
-  
   cssesc@^3.0.0:
     version "3.0.0"
     resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
@@ -2070,7 +2015,7 @@ Lockfile:
     dependencies:
       cssom "~0.3.6"
   
-  csstype@^3.0.2:
+  csstype@^3.0.10, csstype@^3.0.2:
     version "3.0.11"
     resolved "https://registry.npmjs.org/csstype/-/csstype-3.0.11.tgz"
     integrity sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw==
@@ -2088,13 +2033,6 @@ Lockfile:
       abab "^2.0.6"
       whatwg-mimetype "^3.0.0"
       whatwg-url "^11.0.0"
-  
-  dbcontext@1.0.4:
-    version "1.0.4"
-    resolved "https://registry.npmjs.org/dbcontext/-/dbcontext-1.0.4.tgz"
-    integrity sha512-GjkF5/I+O5WH6WjH+BOiP8Yl+MnHTsL17byIzub1qOZFHZBKlhZ2AsjOdHvSsU/Df9F1+sgSTNIPo8eTS2fi4w==
-    dependencies:
-      linq-utils "1.0.1"
   
   debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4, debug@4:
     version "4.3.4"
@@ -2182,47 +2120,12 @@ Lockfile:
     resolved "https://registry.npmjs.org/dom-accessibility-api/-/dom-accessibility-api-0.5.14.tgz"
     integrity sha512-NMt+m9zFMPZe0JcY9gN224Qvk6qLIdqex29clBvc/y75ZBX9YA9wNK3frsYvu2DI1xcCIwxwnX+TlsJ2DSOADg==
   
-  dom-serializer@^2.0.0:
-    version "2.0.0"
-    resolved "https://registry.npmjs.org/dom-serializer/-/dom-serializer-2.0.0.tgz"
-    integrity sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==
-    dependencies:
-      domelementtype "^2.3.0"
-      domhandler "^5.0.2"
-      entities "^4.2.0"
-  
-  domelementtype@^2.3.0:
-    version "2.3.0"
-    resolved "https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz"
-    integrity sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==
-  
   domexception@^4.0.0:
     version "4.0.0"
     resolved "https://registry.npmjs.org/domexception/-/domexception-4.0.0.tgz"
     integrity sha512-A2is4PLG+eeSfoTMA95/s4pvAoSo2mKtiM5jlHkAVewmiO8ISFTFKZjH7UAM1Atli/OT/7JHOrJRJiMKUZKYBw==
     dependencies:
       webidl-conversions "^7.0.0"
-  
-  domhandler@^5.0.2, domhandler@^5.0.3:
-    version "5.0.3"
-    resolved "https://registry.npmjs.org/domhandler/-/domhandler-5.0.3.tgz"
-    integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
-    dependencies:
-      domelementtype "^2.3.0"
-  
-  domutils@^3.0.1:
-    version "3.1.0"
-    resolved "https://registry.npmjs.org/domutils/-/domutils-3.1.0.tgz"
-    integrity sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==
-    dependencies:
-      dom-serializer "^2.0.0"
-      domelementtype "^2.3.0"
-      domhandler "^5.0.3"
-  
-  dotenv@16.0.3:
-    version "16.0.3"
-    resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
-    integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
   
   electron-to-chromium@^1.4.431:
     version "1.4.433"
@@ -2247,7 +2150,7 @@ Lockfile:
       graceful-fs "^4.2.4"
       tapable "^2.2.0"
   
-  entities@^4.2.0, entities@^4.4.0:
+  entities@^4.4.0:
     version "4.4.0"
     resolved "https://registry.npmmirror.com/entities/-/entities-4.4.0.tgz"
     integrity sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==
@@ -2663,11 +2566,6 @@ Lockfile:
     resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.5.tgz"
     integrity sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==
   
-  follow-redirects@^1.15.0:
-    version "1.15.2"
-    resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"
-    integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
-  
   form-data@^4.0.0:
     version "4.0.0"
     resolved "https://registry.npmjs.org/form-data/-/form-data-4.0.0.tgz"
@@ -2827,15 +2725,10 @@ Lockfile:
       merge2 "^1.4.1"
       slash "^3.0.0"
   
-  googlebard@^1.0.6:
-    version "1.0.6"
-    resolved "https://registry.npmjs.org/googlebard/-/googlebard-1.0.6.tgz"
-    integrity sha512-O/ej3dZW7ksvUqe0DkXNW4r4gIhpegWGEid0hsQQgNcVTdA1Gt6baY81un9jjOIYDNTzlJZsrXA4VdCkg+B4yg==
-    dependencies:
-      axios "1.3.2"
-      cheerio "1.0.0-rc.12"
-      dbcontext "1.0.4"
-      dotenv "16.0.3"
+  goober@^2.1.10:
+    version "2.1.13"
+    resolved "https://registry.npmjs.org/goober/-/goober-2.1.13.tgz"
+    integrity sha512-jFj3BQeleOoy7t93E9rZ2de+ScC4lQICLwiAQmKMg9F6roKGaLSHoCDYKkWlSafg138jejvq/mTdvmnwDQgqoQ==
   
   graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4, graceful-fs@^4.2.9:
     version "4.2.10"
@@ -2904,16 +2797,6 @@ Lockfile:
     version "2.0.2"
     resolved "https://registry.npmjs.org/html-escaper/-/html-escaper-2.0.2.tgz"
     integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
-  
-  htmlparser2@^8.0.1:
-    version "8.0.2"
-    resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-8.0.2.tgz"
-    integrity sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==
-    dependencies:
-      domelementtype "^2.3.0"
-      domhandler "^5.0.3"
-      domutils "^3.0.1"
-      entities "^4.4.0"
   
   http-proxy-agent@^5.0.0:
     version "5.0.0"
@@ -3709,11 +3592,6 @@ Lockfile:
     resolved "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
     integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
   
-  linq-utils@1.0.1:
-    version "1.0.1"
-    resolved "https://registry.npmjs.org/linq-utils/-/linq-utils-1.0.1.tgz"
-    integrity sha512-StrPoZEmJDTxFgaUP72ei3aWzjN/QsKlHZoMUGJ9khzeG8zhGjvjos3BtzpFvvAfm6TvrORLEa5WQLcZGFm9Ow==
-  
   load-json-file@^4.0.0:
     version "4.0.0"
     resolved "https://registry.npmjs.org/load-json-file/-/load-json-file-4.0.0.tgz"
@@ -3957,13 +3835,6 @@ Lockfile:
     dependencies:
       path-key "^3.0.0"
   
-  nth-check@^2.0.1:
-    version "2.1.1"
-    resolved "https://registry.npmjs.org/nth-check/-/nth-check-2.1.1.tgz"
-    integrity sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==
-    dependencies:
-      boolbase "^1.0.0"
-  
   nwsapi@^2.2.0:
     version "2.2.1"
     resolved "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.1.tgz"
@@ -4129,14 +4000,6 @@ Lockfile:
       error-ex "^1.3.1"
       json-parse-even-better-errors "^2.3.0"
       lines-and-columns "^1.1.6"
-  
-  parse5-htmlparser2-tree-adapter@^7.0.0:
-    version "7.0.0"
-    resolved "https://registry.npmjs.org/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-7.0.0.tgz"
-    integrity sha512-B77tOZrqqfUfnVcOrUvfdLbz4pu4RopLD/4vmu3HUPswwTA8OH0EMW9BlWR2B0RCoiZRAHEUu7IxeP1Pd1UU+g==
-    dependencies:
-      domhandler "^5.0.2"
-      parse5 "^7.0.0"
   
   parse5@^7.0.0:
     version "7.1.1"
@@ -4347,11 +4210,6 @@ Lockfile:
       object-assign "^4.1.1"
       react-is "^16.13.1"
   
-  proxy-from-env@^1.1.0:
-    version "1.1.0"
-    resolved "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz"
-    integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
-  
   psl@^1.1.33:
     version "1.9.0"
     resolved "https://registry.npmjs.org/psl/-/psl-1.9.0.tgz"
@@ -4374,13 +4232,20 @@ Lockfile:
     dependencies:
       safe-buffer "^5.1.0"
   
-  "react-dom@^16.8 || ^17.0 || ^18.0", react-dom@^18.0.0, react-dom@>=16.8.0, react-dom@18.2.0:
+  "react-dom@^16.8 || ^17.0 || ^18.0", react-dom@^18.0.0, react-dom@>=16, react-dom@>=16.8.0, react-dom@18.2.0:
     version "18.2.0"
     resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
     integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
     dependencies:
       loose-envify "^1.1.0"
       scheduler "^0.23.0"
+  
+  react-hot-toast@^2.4.1:
+    version "2.4.1"
+    resolved "https://registry.npmjs.org/react-hot-toast/-/react-hot-toast-2.4.1.tgz"
+    integrity sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==
+    dependencies:
+      goober "^2.1.10"
   
   react-is@^16.13.1:
     version "16.13.1"
@@ -4402,7 +4267,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/react-refresh/-/react-refresh-0.14.0.tgz"
     integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
   
-  "react@^16.8 || ^17.0 || ^18.0", react@^18.0.0, react@^18.2.0, react@>=16.8.0, react@18.2.0:
+  "react@^16.8 || ^17.0 || ^18.0", react@^18.0.0, react@^18.2.0, react@>=16, react@>=16.8.0, react@18.2.0:
     version "18.2.0"
     resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
     integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

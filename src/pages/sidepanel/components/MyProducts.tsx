@@ -18,6 +18,11 @@ function MyProducts() {
     chrome.storage.sync.get("idealCartProducts", (result) => {
       result.idealCartProducts && setProducts(result.idealCartProducts);
     });
+    chrome.storage.sync.onChanged.addListener((changes) => {
+      if (changes.idealCartProducts) {
+        setProducts(changes.idealCartProducts.newValue);
+      }
+    });
   }, []);
 
   const handleDeleteProduct = async (index: number) => {

@@ -52,17 +52,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const handleClickOutside = (e: MouseEvent) => {
-    const targetElement = e.target as HTMLElement;
-    if (!sidePanel.contains(targetElement)) {
-      sidePanel.style.visibility = "hidden";
-      sidePanel.style.opacity = "0";
-      sidePanel.style.right = "-40px";
-    }
-  };
-  document.addEventListener("click", handleClickOutside);
-  return () => document.removeEventListener("click", handleClickOutside);
-});
+const handleClickOutside = (e: MouseEvent) => {
+  const targetElement = e.target as HTMLElement;
+  if (!sidePanel.contains(targetElement)) {
+    sidePanel.style.visibility = "hidden";
+    sidePanel.style.opacity = "0";
+    sidePanel.style.right = "-40px";
+  }
+};
+document.addEventListener("click", handleClickOutside);
 
 // createContextMenu();

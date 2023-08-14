@@ -5,7 +5,7 @@ import packageJson from "./package.json";
  */
 const manifest: chrome.runtime.ManifestV3 = {
   manifest_version: 3,
-  name: "idealCart",
+  name: "IdealCart - Your Shopping Partner",
   version: packageJson.version,
   description: packageJson.description,
   options_page: "src/pages/options/index.html",
@@ -28,7 +28,7 @@ const manifest: chrome.runtime.ManifestV3 = {
     },
   ],
   devtools_page: "src/pages/devtools/index.html",
-  permissions: ["storage", "activeTab", "tabs"],
+  permissions: ["storage", "tabs"],
   web_accessible_resources: [
     {
       resources: [

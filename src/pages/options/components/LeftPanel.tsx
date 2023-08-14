@@ -11,10 +11,10 @@ function LeftPanel() {
     <div className="flex flex-col items-center justify-between h-screen w-[20vw] p-7 ic-border-right">
       <span className="font-semibold text-3xl">idealCart</span>
       <div className="flex items-center justify-center">
-        <div className="flex flex-col py-4 px-7 rounded-xl bg-neutral-100 text-base font-medium">
+        <div className="flex flex-col py-4 px-7 rounded-xl bg-zinc-100 text-base font-medium">
           <button
             onClick={handleSetTheme}
-            className="flex flex-row items-center w-[153px] gap-2 py-2 px-4 rounded-lg hover:bg-neutral-200"
+            className="flex flex-row items-center w-[153px] gap-2 py-2 px-4 rounded-lg hover:bg-zinc-200"
           >
             <img
               src={darkTheme ? sun : moon}
@@ -23,7 +23,7 @@ function LeftPanel() {
             />
             <span>{darkTheme ? "Light mode" : "Dark mode"}</span>
           </button>
-          <button className="flex flex-row items-center w-[153px] gap-2 py-2 px-4 rounded-lg hover:bg-neutral-200">
+          <button className="flex flex-row items-center w-[153px] gap-2 py-2 px-4 rounded-lg hover:bg-zinc-200">
             <img src={help} alt="help" className="h-5 w-5 cursor-pointer" />
             <span>Help</span>
           </button>
