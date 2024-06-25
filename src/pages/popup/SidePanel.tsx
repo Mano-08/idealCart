@@ -1,14 +1,12 @@
 import React from "react";
 import * as Tabs from "@radix-ui/react-tabs";
-// import { tabs } from "./utils/helper";
 import MyProducts from "./components/MyProducts";
-// import Compare from "./components/Compare";
 import { Toaster } from "react-hot-toast";
 
 function SidePanel() {
   return (
     <Tabs.Root
-      className="flex flex-col h-screen w-screen shadow-[0_2px_10px] shadow-blackA4 bg-white"
+      className="flex flex-col min-h-screen w-screen shadow-[0_2px_10px] shadow-blackA4 bg-white"
       defaultValue="tab1"
     >
       <Toaster position="bottom-left" reverseOrder={false} />

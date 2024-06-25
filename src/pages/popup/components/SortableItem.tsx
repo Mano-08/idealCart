@@ -70,6 +70,13 @@ export function SortableItem({
     });
   };
 
+  const handleError = (
+    event: React.SyntheticEvent<HTMLImageElement, Event>
+  ) => {
+    (event.target as HTMLImageElement).onerror = null;
+    (event.target as HTMLImageElement).src = product;
+  };
+
   const handleEditNotes = (e: any) => {
     setEditNotes(e.target.value);
   };
@@ -97,9 +104,12 @@ export function SortableItem({
           <img
             src={data.imageURL === "" ? product : data.imageURL}
             alt={data.title}
+            onError={handleError}
             className="w-24 h-24 object-cover rounded-lg cursor-grab"
           />
-          <div className="grow">{data.title}</div>
+          <div className="flex items-center justify-center grow h-24 break-all overflow-y-scroll max-w-[200px]">
+            {data.title}
+          </div>
         </div>
       ) : editIndex === -1 ? (
         <a
@@ -111,9 +121,12 @@ export function SortableItem({
           <img
             src={data.imageURL === "" ? product : data.imageURL}
             alt={data.title}
+            onError={handleError}
             className="w-24 h-24 object-cover rounded-lg cursor-pointer"
           />
-          <div className="grow">{data.title}</div>
+          <div className="flex items-center justify-center grow h-24 break-all overflow-y-scroll max-w-[200px]">
+            {data.title}
+          </div>
         </a>
       ) : (
         <div

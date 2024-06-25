@@ -36,7 +36,7 @@ function initReloadServer() {
 const debounceSrc = debounce(function (path: string) {
   // Normalize path on Windows
   const pathConverted = path.replace(/\\/g, "/");
-  clientsThatNeedToUpdate.forEach((ws: WebSocket) =>
+  clientsThatNeedToUpdate?.forEach((ws: WebSocket) =>
     ws.send(
       MessageInterpreter.send({
         type: UPDATE_PENDING_MESSAGE,
@@ -49,7 +49,7 @@ chokidar.watch("src").on("all", (event, path) => debounceSrc(path));
 
 /** CHECK:: build was completed **/
 const debounceDist = debounce(() => {
-  clientsThatNeedToUpdate.forEach((ws: WebSocket) => {
+  clientsThatNeedToUpdate?.forEach((ws: WebSocket) => {
     ws.send(MessageInterpreter.send({ type: UPDATE_REQUEST_MESSAGE }));
   });
 }, 200);

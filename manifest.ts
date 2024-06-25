@@ -17,31 +17,11 @@ const manifest: chrome.runtime.ManifestV3 = {
     "128": "icon-128.png",
   },
   action: {
+    default_popup: "src/pages/popup/index.html",
     default_icon: "icon-128.png",
   },
-  content_scripts: [
-    {
-      matches: ["http://*/*", "https://*/*", "<all_urls>"],
-      js: ["src/pages/content/index.js"],
-      // KEY for cache invalidation
-      css: ["assets/css/contentStyle<KEY>.chunk.css"],
-    },
-  ],
-  devtools_page: "src/pages/devtools/index.html",
-  permissions: ["storage", "tabs"],
-  web_accessible_resources: [
-    {
-      resources: [
-        "assets/js/*.js",
-        "assets/css/*.css",
-        "src/pages/*/*.html",
-        "src/pages/*/*.js",
-        "icon-128.png",
-        "icon-34.png",
-      ],
-      matches: ["*://*/*"],
-    },
-  ],
+  host_permissions: ["*://*/*"],
+  permissions: ["storage", "tabs", "scripting"],
 };
 
 export default manifest;

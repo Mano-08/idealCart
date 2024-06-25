@@ -11,7 +11,15 @@ import {
 } from "@dnd-kit/sortable";
 
 function MyProducts() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<
+    {
+      id: string;
+      productURL: string;
+      imageURL: string;
+      title: string;
+      notes: string;
+    }[]
+  >([]);
   const [isSortable, setIsSortable] = useState(false);
 
   useEffect(() => {
@@ -49,45 +57,38 @@ function MyProducts() {
     }
   }
 
-  function updateProducts(data: {
-    pageTitle: string;
-    pageURL: string;
-    imageURL: string;
-  }) {
-    const { pageTitle, pageURL, imageURL } = data;
-    const isDuplicate = products.some((item) => item.productURL === pageURL);
-    if (isDuplicate) {
-      toast.error("Product already added to cart!");
-      return;
-    }
-    const newProduct = {
-      id: pageURL,
-      productURL: pageURL,
-      imageURL: imageURL,
-      title: pageTitle,
-      notes: "",
-    };
-    setProducts((prev) => {
-      chrome.storage.sync.set({
-        idealCartProducts: [...prev, newProduct],
-      });
-      toast.success("Product added to cart!");
-      return [...prev, newProduct];
-    });
-  }
-
   const handleAddToCart = () => {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
       const tab = tabs[0];
-      chrome.tabs.sendMessage(tab.id, { type: "captureData" }, (response) => {
-        updateProducts(response);
-      });
-    });
-
-    chrome.runtime.onMessage.addListener((request) => {
-      if (request.message === "addToCart-Data") {
-        updateProducts(request.data);
-      }
+      chrome.runtime.sendMessage(
+        { action: "fetchOGImage", url: tab.url, tabId: tab.id },
+        (response) => {
+          const pageTitle = tab.title;
+          const pageURL = tab.url;
+          const imageURL = response.imageURL;
+          const isDuplicate = products.some(
+            (item) => item.productURL === pageURL
+          );
+          if (isDuplicate) {
+            toast.error("Product already added to cart!");
+            return;
+          }
+          const newProduct = {
+            id: pageURL,
+            productURL: pageURL,
+            imageURL: imageURL,
+            title: pageTitle,
+            notes: "",
+          };
+          setProducts((prev) => {
+            chrome.storage.sync.set({
+              idealCartProducts: [...prev, newProduct],
+            });
+            toast.success("Product added to cart!");
+            return [...prev, newProduct];
+          });
+        }
+      );
     });
   };
 
@@ -113,7 +114,7 @@ function MyProducts() {
   return (
     <div className="flex flex-col p-4 pb-0 bg-white rounded-b-md outline-none">
       <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-        <div className="flex flex-col h-[22.75rem] gap-2 w-full p-1 overflow-x-hidden overflow-y-scroll">
+        <div className="flex flex-col h-[27.5rem] gap-2 w-full p-1 overflow-x-hidden overflow-y-scroll">
           <SortableContext
             items={products}
             strategy={verticalListSortingStrategy}
