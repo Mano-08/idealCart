@@ -1,7 +1,7 @@
 {
   "name": "chrome-extension",
   "version": "0.2.1",
-  "description": "chrome extension - core settings",
+  "description": "Shop products across multitude of websites, add them to a single cart.",
   "type": "module",
   "private": true,
   "sideEffects": false,

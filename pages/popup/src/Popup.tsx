@@ -3,23 +3,15 @@ import { useStorage, withErrorBoundary, withSuspense } from '@extension/shared';
 import { exampleThemeStorage } from '@extension/storage';
 import * as Tabs from '@radix-ui/react-tabs';
 import { Toaster } from 'react-hot-toast';
-import Compare from '../components/Compare';
 import MyProducts from '../components/MyProducts';
 import { cn } from '@extension/ui';
-
-const notificationOptions = {
-  type: 'basic',
-  iconUrl: chrome.runtime.getURL('icon-34.png'),
-  title: 'Injecting content script error',
-  message: 'You cannot inject script here!',
-} as const;
 
 const Popup = () => {
   const theme = useStorage(exampleThemeStorage);
   const isLight = theme === 'light';
   const tabs = [
     { tab: 'products', title: 'My Products' },
-    { tab: 'compare', title: 'Compare' },
+    // { tab: 'compare', title: 'Compare' },
   ];
 
   return (
@@ -45,10 +37,6 @@ const Popup = () => {
       <Toaster position="bottom-left" reverseOrder={false} />
       <Tabs.Content className="flex flex-col px-4 rounded-b-md outline-none" value="products">
         <MyProducts />
-      </Tabs.Content>
-
-      <Tabs.Content className="flex flex-col px-4 rounded-b-md outline-none" value="compare">
-        <Compare />
       </Tabs.Content>
     </Tabs.Root>
   );

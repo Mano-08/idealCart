@@ -1,28 +1,41 @@
 import '@src/SidePanel.css';
 import { useStorage, withErrorBoundary, withSuspense } from '@extension/shared';
 import { exampleThemeStorage } from '@extension/storage';
-import { ToggleButton } from '@extension/ui';
-import { t } from '@extension/i18n';
+import * as Tabs from '@radix-ui/react-tabs';
+import { Toaster } from 'react-hot-toast';
+import MyProducts from '../components/MyProducts';
+import { cn } from '@extension/ui';
 
 const SidePanel = () => {
   const theme = useStorage(exampleThemeStorage);
   const isLight = theme === 'light';
-  const logo = isLight ? 'side-panel/logo_vertical.svg' : 'side-panel/logo_vertical_dark.svg';
-  const goGithubSite = () =>
-    chrome.tabs.create({ url: 'https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite' });
+  const tabs = [{ tab: 'products', title: 'My Products' }];
 
   return (
-    <div className={`App ${isLight ? 'bg-slate-50' : 'bg-gray-800'}`}>
-      <header className={`App-header ${isLight ? 'text-gray-900' : 'text-gray-100'}`}>
-        <button onClick={goGithubSite}>
-          <img src={chrome.runtime.getURL(logo)} className="App-logo" alt="logo" />
-        </button>
-        <p>
-          Edit <code>pages/side-panel/src/SidePanel.tsx</code>
-        </p>
-        <ToggleButton onClick={exampleThemeStorage.toggle}>{t('toggleTheme')}</ToggleButton>
-      </header>
-    </div>
+    <Tabs.Root
+      className={cn(
+        'App flex flex-col h-screen w-screen shadow-[0_2px_10px] ',
+        isLight ? 'text-theme-dark/100 bg-theme-light shadow-blackA4' : 'text-theme-light bg-theme-dark shadow-white',
+      )}
+      defaultValue="products">
+      <Tabs.List className="shrink-0 flex">
+        {tabs.map(element => (
+          <Tabs.Trigger
+            className={cn(
+              'h-12 flex w-1/2 justify-center items-center text-[1rem] leading-none select-none cursor-default border-b-2 border-none opacity-45 data-[state=active]:opacity-100 data-[state=active]:border-solid',
+              isLight ? 'border-blackA9' : 'border-neutral-500',
+            )}
+            value={element.tab}
+            key={element.tab}>
+            {element.title}
+          </Tabs.Trigger>
+        ))}
+      </Tabs.List>
+      <Toaster position="bottom-left" reverseOrder={false} />
+      <Tabs.Content className="flex flex-col px-4 rounded-b-md outline-none" value="products">
+        <MyProducts />
+      </Tabs.Content>
+    </Tabs.Root>
   );
 };
 

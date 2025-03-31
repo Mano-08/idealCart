@@ -4,7 +4,7 @@ import type { Config } from 'tailwindcss';
 
 export default {
   ...baseConfig,
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -13,7 +13,20 @@ export default {
         ...mauve,
         ...violet,
       },
+      backgroundColor: {
+        theme: {
+          light: 'rgb(var(--light) / <alpha-value>)',
+          dark: 'rgb(var(--dark) / <alpha-value>)',
+        },
+      },
+      textColor: {
+        theme: {
+          light: 'rgb(var(--light) / <alpha-value>)',
+          dark: 'rgb(var(--dark) / <alpha-value>)',
+        },
+      },
     },
   },
+
   plugins: [],
 } as Config;
