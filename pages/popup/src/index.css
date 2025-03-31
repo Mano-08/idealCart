@@ -3,17 +3,18 @@
 @tailwind utilities;
 
 body {
-  width: 300px;
-  height: 260px;
+  width: 400px;
+  height: 600px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
+  font-family: 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   position: relative;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+@layer base {
+  :root {
+    --light: 247 252 254;
+    --dark: 36 37 38;
+  }
 }

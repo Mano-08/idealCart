@@ -1,8 +1,11 @@
 import '@src/Popup.css';
 import { useStorage, withErrorBoundary, withSuspense } from '@extension/shared';
 import { exampleThemeStorage } from '@extension/storage';
-import { t } from '@extension/i18n';
-import { ToggleButton } from '@extension/ui';
+import * as Tabs from '@radix-ui/react-tabs';
+import { Toaster } from 'react-hot-toast';
+import Compare from '../components/Compare';
+import MyProducts from '../components/MyProducts';
+import { cn } from '@extension/ui';
 
 const notificationOptions = {
   type: 'basic',
@@ -14,50 +17,40 @@ const notificationOptions = {
 const Popup = () => {
   const theme = useStorage(exampleThemeStorage);
   const isLight = theme === 'light';
-  const logo = isLight ? 'popup/logo_vertical.svg' : 'popup/logo_vertical_dark.svg';
-  const goGithubSite = () =>
-    chrome.tabs.create({ url: 'https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite' });
-
-  const injectContentScript = async () => {
-    const [tab] = await chrome.tabs.query({ currentWindow: true, active: true });
-
-    if (tab.url!.startsWith('about:') || tab.url!.startsWith('chrome:')) {
-      chrome.notifications.create('inject-error', notificationOptions);
-    }
-
-    await chrome.scripting
-      .executeScript({
-        target: { tabId: tab.id! },
-        files: ['/content-runtime/index.iife.js'],
-      })
-      .catch(err => {
-        // Handling errors related to other paths
-        if (err.message.includes('Cannot access a chrome:// URL')) {
-          chrome.notifications.create('inject-error', notificationOptions);
-        }
-      });
-  };
+  const tabs = [
+    { tab: 'products', title: 'My Products' },
+    { tab: 'compare', title: 'Compare' },
+  ];
 
   return (
-    <div className={`App ${isLight ? 'bg-slate-50' : 'bg-gray-800'}`}>
-      <header className={`App-header ${isLight ? 'text-gray-900' : 'text-gray-100'}`}>
-        <button onClick={goGithubSite}>
-          <img src={chrome.runtime.getURL(logo)} className="App-logo" alt="logo" />
-        </button>
-        <p>
-          Edit <code>pages/popup/src/Popup.tsx</code>
-        </p>
-        <button
-          className={
-            'font-bold mt-4 py-1 px-4 rounded shadow hover:scale-105 ' +
-            (isLight ? 'bg-blue-200 text-black' : 'bg-gray-700 text-white')
-          }
-          onClick={injectContentScript}>
-          Click to inject Content Script
-        </button>
-        <ToggleButton>{t('toggleTheme')}</ToggleButton>
-      </header>
-    </div>
+    <Tabs.Root
+      className={cn(
+        'App flex flex-col h-screen w-screen shadow-[0_2px_10px] ',
+        isLight ? 'text-theme-dark/100 bg-theme-light shadow-blackA4' : 'text-theme-light bg-theme-dark shadow-white',
+      )}
+      defaultValue="products">
+      <Tabs.List className="shrink-0 flex">
+        {tabs.map(element => (
+          <Tabs.Trigger
+            className={cn(
+              'h-12 flex w-1/2 justify-center items-center text-[1rem] leading-none select-none cursor-default border-b-2 border-none opacity-45 data-[state=active]:opacity-100 data-[state=active]:border-solid',
+              isLight ? 'border-blackA9' : 'border-neutral-500',
+            )}
+            value={element.tab}
+            key={element.tab}>
+            {element.title}
+          </Tabs.Trigger>
+        ))}
+      </Tabs.List>
+      <Toaster position="bottom-left" reverseOrder={false} />
+      <Tabs.Content className="flex flex-col px-4 rounded-b-md outline-none" value="products">
+        <MyProducts />
+      </Tabs.Content>
+
+      <Tabs.Content className="flex flex-col px-4 rounded-b-md outline-none" value="compare">
+        <Compare />
+      </Tabs.Content>
+    </Tabs.Root>
   );
 };
 
